@@ -1,5 +1,5 @@
 export default function decorate(block) {
-  [...block.children].forEach(card => {
+  [...block.children].forEach((card) => {
     card.classList.add('bio-cards-slide');
 
     const [imgWrapper, contentWrapper] = [...card.children];
