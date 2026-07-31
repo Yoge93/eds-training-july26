@@ -33,6 +33,10 @@
             {
               "name": "Highlight",
               "value": "highlight"
+            },
+            {
+              "name": "our-team",
+              "value": "our-team"
             }
           ]
         }
