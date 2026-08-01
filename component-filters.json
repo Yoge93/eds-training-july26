@@ -44,5 +44,11 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "example-cards",
+    "components": [
+      "example-card"
+    ]
   }
 ]
