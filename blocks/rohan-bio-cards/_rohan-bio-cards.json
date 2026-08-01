@@ -1,31 +1,31 @@
 {
     "definitions": [
         {
-            "title": "Bio Cards",
+            "title": "Rohan Bio Cards",
             "id": "rohan-bio-cards",
             "plugins": {
                 "xwalk": {
                     "page": {
                         "resourceType": "core/franklin/components/block/v1/block",
                         "template": {
-                            "name": "Bio Cards",
+                            "name": "Rohan Bio Cards",
                             "model": "rohan-bio-cards",
-                            "filter": "bio-cards"
+                            "filter": "rohan-bio-cards"
                         }
                     }
                 }
             }
         },
         {
-            "title": "Bio Card",
+            "title": "Rohan Bio Card",
             "id": "rohan-bio-cards-item",
             "plugins": {
                 "xwalk": {
                     "page": {
                         "resourceType": "core/franklin/components/block/v1/block/item",
                         "template": {
-                            "name": "Bio Card",
-                            "model": "bio-card"
+                            "name": "Rohan Bio Card",
+                            "model": "rohan-bio-cards-item"
                         }
                     }
                 }
@@ -34,7 +34,7 @@
     ],
     "models": [
         {
-            "id": "rohan-bio-cards",
+            "id": "bio-cards",
             "fields": [
                 {
                     "component": "multiselect",
@@ -45,7 +45,7 @@
                             "name": "Cards Style",
                             "children": [
                                 {
-                                    "name": "Bio Cards",
+                                    "name": "Rohan Bio Cards",
                                     "value": "bio-cards"
                                 }
                             ]
@@ -55,7 +55,7 @@
             ]
         },
         {
-            "id": "rohan-bio-cards-item",
+            "id": "bio-card",
             "fields": [
                 {
                     "component": "reference",
@@ -131,9 +131,9 @@
     ],
     "filters": [
         {
-            "id": "bio-cards",
+            "id": "rohan-bio-cards",
             "components": [
-                "bio-card"
+                "rohan-bio-cards-item"
             ]
         }
     ]

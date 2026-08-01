@@ -46,9 +46,9 @@
     ]
   },
   {
-    "id": "bio-cards",
+    "id": "rohan-bio-cards",
     "components": [
-      "bio-card"
+      "rohan-bio-cards-item"
     ]
   }
 ]
