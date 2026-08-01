@@ -15,7 +15,8 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "swapnali-cards"
     ]
   },
   {
@@ -43,6 +44,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "swapnali-cards",
+    "components": [
+      "swapnali-card"
     ]
   }
 ]
