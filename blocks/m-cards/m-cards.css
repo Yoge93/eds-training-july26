@@ -1,0 +1,79 @@
+.m-cards {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 0.5rem;
+  margin: 0 -0.5rem;
+  cursor: grab;
+  user-select: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.m-cards::-webkit-scrollbar {
+  display: none;
+}
+
+.m-cards.dragging {
+  cursor: grabbing;
+  scroll-behavior: auto;
+}
+
+.m-cards-slide {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.m-cards-slide:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgb(0 0 0 / 10%);
+}
+
+.m-card-img picture,
+.m-card-img img {
+  display: block;
+  width: 100%;
+}
+
+.m-card-img img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.m-card-content {
+  padding: 1rem;
+}
+
+.m-card-name {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.m-card-designation {
+  margin-top: .35rem;
+  color: #666;
+}
+
+.m-card-description {
+  margin-top: .75rem;
+  line-height: 1.6;
+}
+
+.m-card-btn-text {
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .m-cards-slide {
+    flex-basis: 80%;
+  }
+}
