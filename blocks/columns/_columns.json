@@ -39,7 +39,7 @@
   ],
   "filters": [
     {
-      "id": "columns",
+      "id": "columns", 
       "components": [
         "column"
       ]
