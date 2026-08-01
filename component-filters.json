@@ -15,7 +15,14 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "banner-eds-s"
+    ]
+  },
+  {
+    "id": "banner-eds-s",
+    "components": [
+      "banner-eds-s"
     ]
   },
   {
