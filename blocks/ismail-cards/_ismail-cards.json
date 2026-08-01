@@ -1,0 +1,85 @@
+{
+    "definitions": [
+        {
+            "title": "Ismail  Cards",
+            "id": "ismail-cards",
+            "plugins": {
+                "xwalk": {
+                    "page": {
+                        "resourceType": "core/franklin/components/block/v1/block",
+                        "template": {
+                            "name": "Ismail Cards",
+                            "model": "ismail-cards",
+                            "filter": "ismail-cards"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "title": "Ismail Card",
+            "id": "ismail-card",
+            "plugins": {
+                "xwalk": {
+                    "page": {
+                        "resourceType": "core/franklin/components/block/v1/block/item",
+                        "template": {
+                            "name": "Ismail Card",
+                            "model": "ismail-card"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "models": [
+        {
+            "id": "ismail-cards",
+            "fields": [
+                {
+                    "component": "multiselect",
+                    "name": "classes",
+                    "label": "Classes",
+                    "options": [
+                        {
+                            "name": "Cards Style",
+                            "children": [
+                                {
+                                    "name": "Ismail Cards",
+                                    "value": "ismail-cards"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "ismail-card",
+            "fields": [
+                {
+                    "component": "text",
+                    "name": "col2_description",
+                    "value": "Main title ",
+                    "label": "Description",
+                    "valueType": "string"
+                },
+                {
+                    "component": "reference",
+                    "valueType": "string",
+                    "name": "col1_image",
+                    "label": "Image",
+                    "multi": false
+                }          
+            ]
+        }
+    ],
+    "filters": [
+        {
+            "id": "ismail-cards",
+            "components": [
+                "ismail-card"
+            ]
+        }
+    ]
+}

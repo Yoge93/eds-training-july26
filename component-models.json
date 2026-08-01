@@ -313,5 +313,45 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "ismail-cards",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Classes",
+        "options": [
+          {
+            "name": "Cards Style",
+            "children": [
+              {
+                "name": "Ismail Cards",
+                "value": "ismail-cards"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ismail-card",
+    "fields": [
+      {
+        "component": "text",
+        "name": "col2_description",
+        "value": "Main title ",
+        "label": "Description",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image",
+        "multi": false
+      }
+    ]
   }
 ]
