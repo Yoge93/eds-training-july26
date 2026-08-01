@@ -185,6 +185,13 @@
       },
       {
         "component": "text",
+        "valueType": "string",
+        "name": "col1_fetchPriority",
+        "label": "Fetch Priority",
+        "value": "high"
+      },
+      {
+        "component": "text",
         "name": "col2_person",
         "value": "",
         "label": "Name",
