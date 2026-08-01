@@ -54,7 +54,9 @@
         "hero",
         "cards",
         "columns",
-        "fragment"
+        "fragment",
+        "rahul-cards",
+        "bio-cards"
       ]
     }
   ]
