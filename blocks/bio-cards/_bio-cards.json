@@ -132,6 +132,13 @@
                             "value": "secondary"
                         }
                     ]
+                },
+                                {
+                    "component": "richtext",
+                    "name": "col3_description",
+                    "value": "",
+                    "label": "Test Description",
+                    "valueType": "string"
                 }
             ]
         }
