@@ -44,5 +44,11 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "dummy-component",
+    "components": [
+      "dummy-card"
+    ]
   }
 ]
