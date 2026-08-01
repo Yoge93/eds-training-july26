@@ -8,7 +8,7 @@
                     "page": {
                         "resourceType": "core/franklin/components/block/v1/block",
                         "template": {
-                            "name": "main-wrapper",
+                            "name": "main wrapper",
                             "model": "main-wrapper",
                             "filter": "main-wrapper"
                         }
@@ -46,7 +46,7 @@
                             "children": [
                                 {
                                     "name": "Bio Cards",
-                                    "value": "bio-cards"
+                                    "value": "dummy-class"
                                 }
                             ]
                         }
@@ -55,7 +55,7 @@
             ]
         },
         {
-            "id": "bio-card",
+            "id": "dummy-card",
             "fields": [
                 {
                     "component": "reference",

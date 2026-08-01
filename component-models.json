@@ -291,7 +291,7 @@
             "children": [
               {
                 "name": "Bio Cards",
-                "value": "bio-cards"
+                "value": "dummy-class"
               }
             ]
           }
@@ -300,7 +300,7 @@
     ]
   },
   {
-    "id": "bio-card",
+    "id": "dummy-card",
     "fields": [
       {
         "component": "reference",
