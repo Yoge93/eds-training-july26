@@ -326,8 +326,8 @@
             "name": "Cards Style",
             "children": [
               {
-                "name": "My Cards",
-                "value": "my-cards"
+                "name": "My Cards1",
+                "value": "my-cards1"
               },
               {
                 "name": "My Cards2",
@@ -349,6 +349,16 @@
             ]
           }
         ]
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "rictext",
+        "name": "description",
+        "label": "Description"
       }
     ]
   }
