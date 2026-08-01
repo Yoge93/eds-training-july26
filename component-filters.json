@@ -15,7 +15,8 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "main-wrapper"
     ]
   },
   {
@@ -43,6 +44,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "main-wrapper",
+    "components": [
+      "dummy-card"
     ]
   }
 ]
