@@ -1,4 +1,5 @@
 export default function decorate(block) {
+  console.log('Decorating dk-cards block:', block);
   [...block.children].forEach((card) => {
     // 1. Update the base card slide class
     card.classList.add('dk-card-slide');

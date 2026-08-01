@@ -51,15 +51,15 @@
   flex-direction: column;
 }
 
+.dk-card-slide:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgb(0 0 0 / 10%);
+}
+
 /* Dark Theme Overrides for the Card */
 .dk-cards.dark-theme .dk-card-slide {
   background: #222;
   color: #f1f1f1;
-}
-
-.dk-card-slide:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgb(0 0 0 / 10%);
 }
 
 /* Dark Theme Box Shadow Override */
@@ -123,7 +123,7 @@
 .dk-card-keywords {
   list-style: none;
   padding: 0;
-  margin: 1rem 0 0 0;
+  margin: 1rem 0 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -149,12 +149,13 @@
 .dk-card-socials {
   list-style: none;
   padding: 0;
-  margin: 1.5rem 0 0 0;
+  margin: 1.5rem 0 0;
   display: flex;
   gap: 1rem;
   align-items: center;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .dk-card-socials li {
   display: flex;
 }
@@ -206,7 +207,7 @@
 /* ==============================================================
    Responsive Queries
    ============================================================== */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .dk-card-slide {
     flex-basis: 80%;
   }
