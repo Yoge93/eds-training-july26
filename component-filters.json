@@ -44,5 +44,11 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "info-cards",
+    "components": [
+      "info-card"
+    ]
   }
 ]
