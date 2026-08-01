@@ -279,6 +279,42 @@
     ]
   },
   {
+    "id": "custom-block",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Classes",
+        "options": [
+          {
+            "name": "Custom Block Style",
+            "children": [
+              {
+                "name": "Custom Block-Style",
+                "value": "custom-block-style"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "custom-block-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "textarea",
+        "name": "description",
+        "label": "Description"
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
