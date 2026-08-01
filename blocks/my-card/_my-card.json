@@ -31,7 +31,7 @@
               "children": [
                 {
                   "name": "My Cards",
-                  "value": "my-card"
+                  "value": "my-cards"
                 }
               ]
             }
@@ -40,5 +40,10 @@
       ]
     }
   ],
-  "filters": []
+  "filters": [
+    {
+      "id": "my-cards",
+      "components": ["my-card"]
+    }
+  ]
 }
