@@ -19,6 +19,12 @@
     ]
   },
   {
+    "id": "bhau-cards",
+    "components": [
+      "bhau-card"
+    ]
+  },
+  {
     "id": "bio-cards",
     "components": [
       "bio-card"

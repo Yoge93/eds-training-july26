@@ -1,0 +1,79 @@
+.bhav-cards {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 0.5rem;
+  margin: 0 -0.5rem;
+  cursor: grab;
+  user-select: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.bhav-cards::-webkit-scrollbar {
+  display: none;
+}
+
+.bhav-cards.dragging {
+  cursor: grabbing;
+  scroll-behavior: auto;
+}
+
+.bhav-cards-slide {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.bhav-cards-slide:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgb(0 0 0 / 10%);
+}
+
+.bhav-card-img picture,
+.bhav-card-img img {
+  display: block;
+  width: 100%;
+}
+
+.bhav-card-img img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.bhav-card-content {
+  padding: 1rem;
+}
+
+.bhav-card-name {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.bhav-card-designation {
+  margin-top: .35rem;
+  color: #666;
+}
+
+.bhav-card-description {
+  margin-top: .75rem;
+  line-height: 1.6;
+}
+
+.bhav-card-btn-text {
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .bhav-cards-slide {
+    flex-basis: 80%;
+  }
+}
