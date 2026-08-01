@@ -1,0 +1,79 @@
+.rahul-cards {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 0.5rem;
+  margin: 0 -0.5rem;
+  cursor: grab;
+  user-select: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.rahul-cards::-webkit-scrollbar {
+  display: none;
+}
+
+.rahul-cards.dragging {
+  cursor: grabbing;
+  scroll-behavior: auto;
+}
+
+.rahul-cards-slide {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.rahul-cards-slide:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgb(0 0 0 / 10%);
+}
+
+.rahul-card-img picture,
+.rahul-card-img img {
+  display: block;
+  width: 100%;
+}
+
+.rahul-card-img img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.rahul-card-content {
+  padding: 1rem;
+}
+
+.rahul-card-name {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.rahul-card-designation {
+  margin-top: .35rem;
+  color: #666;
+}
+
+.rahul-card-description {
+  margin-top: .75rem;
+  line-height: 1.6;
+}
+
+.rahul-card-btn-text {
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .rahul-cards-slide {
+    flex-basis: 80%;
+  }
+}

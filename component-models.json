@@ -313,5 +313,81 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "rahul-cards",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Classes",
+        "options": [
+          {
+            "name": "Cards Style",
+            "children": [
+              {
+                "name": "Rahul Cards",
+                "value": "rahul-cards"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rahul-card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "Image Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col2_designarahuln",
+        "value": "",
+        "label": "Designarahuln",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "col2_link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "col2_linkText",
+        "label": "Text"
+      },
+      {
+        "component": "select",
+        "name": "col2_linkType",
+        "label": "Type",
+        "oprahulns": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          }
+        ]
+      }
+    ]
   }
 ]

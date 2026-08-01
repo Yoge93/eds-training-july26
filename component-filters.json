@@ -44,5 +44,11 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "rahul-cards",
+    "components": [
+      "rahul-card"
+    ]
   }
 ]

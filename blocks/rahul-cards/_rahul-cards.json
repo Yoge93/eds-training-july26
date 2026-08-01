@@ -1,0 +1,122 @@
+{
+    "definitions": [
+        {
+            "title": "Rahul Cards",
+            "id": "rahul-cards",
+            "plugins": {
+                "xwalk": {
+                    "page": {
+                        "resourceType": "core/franklin/components/block/v1/block",
+                        "template": {
+                            "name": "Rahul Cards",
+                            "model": "rahul-cards",
+                            "filter": "rahul-cards"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "title": "rahul Card",
+            "id": "rahul-card",
+            "plugins": {
+                "xwalk": {
+                    "page": {
+                        "resourceType": "core/franklin/components/block/v1/block/item",
+                        "template": {
+                            "name": "rahul Card",
+                            "model": "rahul-card"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "models": [
+        {
+            "id": "rahul-cards",
+            "fields": [
+                {
+                    "component": "multiselect",
+                    "name": "classes",
+                    "label": "Classes",
+                    "options": [
+                        {
+                            "name": "Cards Style",
+                            "children": [
+                                {
+                                    "name": "Rahul Cards",
+                                    "value": "rahul-cards"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "rahul-card",
+            "fields": [
+                {
+                    "component": "reference",
+                    "valueType": "string",
+                    "name": "col1_image",
+                    "label": "Image",
+                    "multi": false
+                },
+                {
+                    "component": "text",
+                    "valueType": "string",
+                    "name": "col1_imageAlt",
+                    "label": "Image Alt",
+                    "value": ""
+                },
+                {
+                    "component": "richtext",
+                    "name": "col2_designarahuln",
+                    "value": "",
+                    "label": "Designarahuln",
+                    "valueType": "string"
+                },
+                {
+                    "component": "aem-content",
+                    "name": "col2_link",
+                    "label": "Link"
+                },
+                {
+                    "component": "text",
+                    "name": "col2_linkText",
+                    "label": "Text"
+                },
+                {
+                    "component": "select",
+                    "name": "col2_linkType",
+                    "label": "Type",
+                    "oprahulns": [
+                        {
+                            "name": "default",
+                            "value": ""
+                        },
+                        {
+                            "name": "primary",
+                            "value": "primary"
+                        },
+                        {
+                            "name": "secondary",
+                            "value": "secondary"
+                        }
+                        
+                    ]
+                }
+            ]
+        }
+    ],
+    "filters": [
+        {
+            "id": "rahul-cards",
+            "components": [
+                "rahul-card"
+            ]
+        }
+    ]
+}
