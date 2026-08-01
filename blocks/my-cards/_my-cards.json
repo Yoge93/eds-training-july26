@@ -15,6 +15,36 @@
           }
         }
       }
+    },
+    {
+      "title": "My Card",
+      "id": "my-card",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "My Card",
+              "model": "my-card"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Your Card",
+      "id": "your-card",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Your Card",
+              "model": "your-card"
+            }
+          }
+        }
+      }
     }
   ],
   "models": [
@@ -66,7 +96,50 @@
           "label": "Description"
         }
       ]
+    },
+    {
+      "id": "my-card",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "col1_image",
+          "label": "Image",
+          "multi": false
+        },
+        {
+          "component": "richtext",
+          "name": "col2_description",
+          "value": "",
+          "label": "Description",
+          "valueType": "string"
+        }
+      ]
+    },
+    {
+      "id": "your-card",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "col1_yourimage",
+          "label": "Image",
+          "multi": false
+        },
+        {
+          "component": "richtext",
+          "name": "col2_yourdescription",
+          "value": "",
+          "label": "Description",
+          "valueType": "string"
+        }
+      ]
     }
   ],
-  "filters": []
+  "filters": [
+    {
+      "id": "my-cards",
+      "components": ["my-card", "your-card"]
+    }
+  ]
 }

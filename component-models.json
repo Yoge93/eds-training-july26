@@ -362,5 +362,43 @@
         "label": "Description"
       }
     ]
+  },
+  {
+    "id": "my-card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "col2_description",
+        "value": "",
+        "label": "Description",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "your-card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_yourimage",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "col2_yourdescription",
+        "value": "",
+        "label": "Description",
+        "valueType": "string"
+      }
+    ]
   }
 ]

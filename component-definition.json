@@ -203,6 +203,36 @@
               }
             }
           }
+        },
+        {
+          "title": "My Card",
+          "id": "my-card",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "My Card",
+                  "model": "my-card"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Your Card",
+          "id": "your-card",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Your Card",
+                  "model": "your-card"
+                }
+              }
+            }
+          }
         }
       ]
     }

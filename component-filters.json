@@ -45,5 +45,12 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "my-cards",
+    "components": [
+      "my-card",
+      "your-card"
+    ]
   }
 ]
