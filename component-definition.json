@@ -205,14 +205,14 @@
           }
         },
         {
-          "title": "rahul Card",
+          "title": "Rahul Card",
           "id": "rahul-card",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "rahul Card",
+                  "name": "Rahul Card",
                   "model": "rahul-card"
                 }
               }
