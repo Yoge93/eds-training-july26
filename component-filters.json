@@ -15,7 +15,8 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "shravan-bio-cards"
     ]
   },
   {
@@ -43,6 +44,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "shravan-bio-cards",
+    "components": [
+      "shravan-bio-card"
     ]
   }
 ]

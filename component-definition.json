@@ -187,6 +187,37 @@
               }
             }
           }
+        },
+        {
+          "title": "Shravan Bio Cards",
+          "id": "shravan-bio-cards",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Shravan Bio Cards",
+                  "model": "shravan-bio-cards",
+                  "filter": "shravan-bio-cards"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Shravan child Bio Cards",
+          "id": "shravan-bio-card",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Shravan child Bio Card",
+                  "model": "shravan-bio-card"
+                }
+              }
+            }
+          }
         }
       ]
     }
