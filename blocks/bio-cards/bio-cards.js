@@ -1,4 +1,5 @@
 export default function decorate(block) {
+  console.log("Bio Cards Decorate Function Called");
   [...block.children].forEach((card) => {
     card.classList.add('bio-cards-slide');
 
