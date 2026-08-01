@@ -279,6 +279,82 @@
     ]
   },
   {
+    "id": "dummy-wrapper",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Classes",
+        "options": [
+          {
+            "name": "Cards Style",
+            "children": [
+              {
+                "name": "Dummy cards",
+                "value": "dummy-class"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dummy-card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col2_person",
+        "value": "",
+        "label": "Name",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_description",
+        "value": "",
+        "label": "Description",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "col2_link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "col2_linkText",
+        "label": "Text"
+      },
+      {
+        "component": "select",
+        "name": "col2_linkType",
+        "label": "Type",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
