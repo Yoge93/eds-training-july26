@@ -83,6 +83,37 @@
       "id": "blocks",
       "components": [
         {
+          "title": "Anshul New Block",
+          "id": "anshul-new-block",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Anshul New Block",
+                  "model": "anshul-new-block",
+                  "filter": "anshul-new-block"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Anshul New Block Item",
+          "id": "anshul-new-block-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Anshul New Block Item",
+                  "model": "anshul-new-block-item"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Bio Cards",
           "id": "bio-cards",
           "plugins": {

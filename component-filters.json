@@ -19,6 +19,12 @@
     ]
   },
   {
+    "id": "anshul-new-block",
+    "components": [
+      "anshul-new-block-item"
+    ]
+  },
+  {
     "id": "bio-cards",
     "components": [
       "bio-card"
