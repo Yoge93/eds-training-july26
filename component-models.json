@@ -185,13 +185,6 @@
       },
       {
         "component": "text",
-        "valueType": "string",
-        "name": "col1_fetchPriority",
-        "label": "Fetch Priority",
-        "value": "high"
-      },
-      {
-        "component": "text",
         "name": "col2_person",
         "value": "",
         "label": "Name",
@@ -244,13 +237,6 @@
             "value": "secondary"
           }
         ]
-      },
-      {
-        "component": "richtext",
-        "name": "col3_description",
-        "value": "",
-        "label": "Test Description",
-        "valueType": "string"
       }
     ]
   },
@@ -365,6 +351,13 @@
         "name": "col1_imageAlt",
         "label": "Image Alt",
         "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_fetchPriority",
+        "label": "Fetch Priority",
+        "value": "high"
       },
       {
         "component": "text",
