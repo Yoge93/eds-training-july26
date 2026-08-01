@@ -159,37 +159,6 @@
           }
         },
         {
-          "title": "Dummy Wrapper",
-          "id": "dummy-wrapper",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Dummy Wrapper",
-                  "model": "dummy-wrapper",
-                  "filter": "dummy-wrapper"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Dummy card",
-          "id": "dummy-card",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Dummy card",
-                  "model": "dummy-card"
-                }
-              }
-            }
-          }
-        },
-        {
           "title": "Fragment",
           "id": "fragment",
           "plugins": {

@@ -45,11 +45,5 @@
       "button",
       "title"
     ]
-  },
-  {
-    "id": "dummy-wrapper",
-    "components": [
-      "dummy-card"
-    ]
   }
 ]
