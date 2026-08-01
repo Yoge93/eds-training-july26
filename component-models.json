@@ -313,5 +313,26 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "my-cards",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Classes",
+        "options": [
+          {
+            "name": "Cards Style",
+            "children": [
+              {
+                "name": "My Cards",
+                "value": "my-card"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]
