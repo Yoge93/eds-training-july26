@@ -72,6 +72,13 @@
                     "value": ""
                 },
                 {
+                    "component": "text",
+                    "valueType": "string",
+                    "name": "Description",
+                    "label": "Description",
+                    "value": ""
+                },
+                {
                     "component": "select",
                     "name": "col2_linkType",
                     "label": "Type",
