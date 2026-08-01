@@ -1,0 +1,15 @@
+.dummy-block {
+  padding: 16px;
+}
+
+.dummy-block .dummy-block-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dummy-block .dummy-block-item {
+  border: 1px solid #dadada;
+  padding: 16px;
+  background-color: var(--background-color);
+}

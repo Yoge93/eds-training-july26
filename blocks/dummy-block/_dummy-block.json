@@ -1,0 +1,128 @@
+{
+    "definitions": [
+        {
+            "title": "Dummy Block",
+            "id": "dummy-block",
+            "plugins": {
+                "xwalk": {
+                    "page": {
+                        "resourceType": "core/franklin/components/block/v1/block",
+                        "template": {
+                            "name": "Dummy Block",
+                            "model": "dummy-block",
+                            "filter": "dummy-block"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "title": "Dummy Block Item",
+            "id": "dummy-block-item",
+            "plugins": {
+                "xwalk": {
+                    "page": {
+                        "resourceType": "core/franklin/components/block/v1/block/item",
+                        "template": {
+                            "name": "Dummy Block Item",
+                            "model": "dummy-block-item"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "models": [
+        {
+            "id": "dummy-block",
+            "fields": [
+                {
+                    "component": "multiselect",
+                    "name": "classes",
+                    "label": "Classes",
+                    "options": [
+                        {
+                            "name": "Dummy Block Style",
+                            "children": [
+                                {
+                                    "name": "Dummy Block",
+                                    "value": "dummy-block"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "dummy-block-item",
+            "fields": [
+                {
+                    "component": "reference",
+                    "valueType": "string",
+                    "name": "col1_image",
+                    "label": "Image",
+                    "multi": false
+                },
+                {
+                    "component": "text",
+                    "valueType": "string",
+                    "name": "col1_imageAlt",
+                    "label": "Image Alt",
+                    "value": ""
+                },
+                {
+                    "component": "text",
+                    "name": "col2_title",
+                    "value": "",
+                    "label": "Title",
+                    "valueType": "string"
+                },
+                {
+                    "component": "richtext",
+                    "name": "col2_description",
+                    "value": "",
+                    "label": "Description",
+                    "valueType": "string"
+                },
+                {
+                    "component": "aem-content",
+                    "name": "col2_link",
+                    "label": "Link"
+                },
+                {
+                    "component": "text",
+                    "name": "col2_linkText",
+                    "label": "Text"
+                },
+                {
+                    "component": "select",
+                    "name": "col2_linkType",
+                    "label": "Type",
+                    "options": [
+                        {
+                            "name": "default",
+                            "value": ""
+                        },
+                        {
+                            "name": "primary",
+                            "value": "primary"
+                        },
+                        {
+                            "name": "secondary",
+                            "value": "secondary"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "filters": [
+        {
+            "id": "dummy-block",
+            "components": [
+                "dummy-block-item"
+            ]
+        }
+    ]
+}
