@@ -46,8 +46,7 @@
                             "children": [
                                 {
                                     "name": "Custom Block Node",
-                                    "value": "custom-block-node"
-                                    
+                                    "value": "custom-block-node"    
                                 }
                             ]
                         }
