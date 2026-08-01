@@ -1,0 +1,213 @@
+/* ==============================================================
+   Main Container & Scrolling (Renamed from bio-cards)
+   ============================================================== */
+.dk-cards {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 0.5rem;
+  margin: 0 -0.5rem;
+  cursor: grab;
+  user-select: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.dk-cards::-webkit-scrollbar {
+  display: none;
+}
+
+.dk-cards.dragging {
+  cursor: grabbing;
+  scroll-behavior: auto;
+}
+
+/* ==============================================================
+   Block Options: Fullwidth & Theme
+   ============================================================== */
+.dk-cards.fullwidth {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 1rem 2rem;
+}
+
+/* ==============================================================
+   Individual Card Slide
+   ============================================================== */
+.dk-card-slide {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform .3s ease, box-shadow .3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dark Theme Overrides for the Card */
+.dk-cards.dark-theme .dk-card-slide {
+  background: #222;
+  color: #f1f1f1;
+}
+
+.dk-card-slide:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgb(0 0 0 / 10%);
+}
+
+/* Dark Theme Box Shadow Override */
+.dk-cards.dark-theme .dk-card-slide:hover {
+  box-shadow: 0 12px 30px rgb(255 255 255 / 5%);
+}
+
+/* ==============================================================
+   Card Image
+   ============================================================== */
+.dk-card-img picture,
+.dk-card-img img {
+  display: block;
+  width: 100%;
+}
+
+.dk-card-img img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+/* ==============================================================
+   Card Content & Typography
+   ============================================================== */
+.dk-card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Pushes button to bottom if cards are different heights */
+}
+
+/* Targeting dynamic semantic headings (h2, h3, h4) for the Name */
+.dk-card-content h2,
+.dk-card-content h3,
+.dk-card-content h4 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.dk-card-designation {
+  margin-top: 0.25rem;
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.dk-cards.dark-theme .dk-card-designation {
+  color: #aaa;
+}
+
+.dk-card-description {
+  margin-top: 1rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* ==============================================================
+   Keywords (Multi-field rendering as UL)
+   ============================================================== */
+.dk-card-keywords {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.dk-card-keywords li {
+  background: #f0f0f0;
+  color: #333;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.dk-cards.dark-theme .dk-card-keywords li {
+  background: #444;
+  color: #ddd;
+}
+
+/* ==============================================================
+   Socials (Composite Multi-field rendering as UL)
+   ============================================================== */
+.dk-card-socials {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0 0;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.dk-card-socials li {
+  display: flex;
+}
+
+/* Target the icon image inside the social list */
+.dk-card-socials li img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  transition: opacity 0.2s;
+}
+
+.dk-card-socials li a:hover img {
+  opacity: 0.7;
+}
+
+/* ==============================================================
+   Buttons & Links
+   ============================================================== */
+.dk-card-btn-container {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.dk-cards.dark-theme .dk-card-btn-container {
+  border-top-color: #444;
+}
+
+/* Basic styling for the linkType drop down (primary vs default) */
+.dk-card-btn-container a.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+
+.dk-card-btn-container a.button.primary {
+  background: #0054ff;
+  color: #fff;
+}
+
+.dk-card-btn-container a.button.primary:hover {
+  background: #003cc2;
+}
+
+/* ==============================================================
+   Responsive Queries
+   ============================================================== */
+@media (max-width: 768px) {
+  .dk-card-slide {
+    flex-basis: 80%;
+  }
+}

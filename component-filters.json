@@ -15,7 +15,8 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "dk-cards"
     ]
   },
   {
@@ -43,6 +44,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "dk-cards",
+    "components": [
+      "dk-card"
     ]
   }
 ]

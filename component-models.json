@@ -279,6 +279,160 @@
     ]
   },
   {
+    "id": "dk-cards",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes_theme",
+        "label": "Theme",
+        "options": [
+          {
+            "name": "Light",
+            "value": "light-theme"
+          },
+          {
+            "name": "Dark",
+            "value": "dark-theme"
+          }
+        ],
+        "description": "Select the overall color theme for the cards block."
+      },
+      {
+        "component": "checkbox",
+        "name": "classes_fullwidth",
+        "label": "Full Width",
+        "valueType": "boolean",
+        "description": "Check this box to make the cards span the full width of the page container."
+      }
+    ]
+  },
+  {
+    "id": "dk-card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image",
+        "multi": false,
+        "required": true,
+        "description": "Select the primary image or avatar for this card."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "Image Alt Text",
+        "value": "",
+        "placeholder": "e.g., Portrait of Jane Doe"
+      },
+      {
+        "component": "text",
+        "name": "col2_person",
+        "value": "",
+        "label": "Name",
+        "valueType": "string",
+        "required": true
+      },
+      {
+        "component": "select",
+        "name": "col2_personType",
+        "label": "Name Heading Level",
+        "description": "Select the semantic HTML heading level for the name.",
+        "options": [
+          {
+            "name": "H2",
+            "value": "h2"
+          },
+          {
+            "name": "H3",
+            "value": "h3"
+          },
+          {
+            "name": "H4",
+            "value": "h4"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "name": "col2_designation",
+        "value": "",
+        "label": "Designation",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_description",
+        "value": "",
+        "label": "Description",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_keywords",
+        "label": "Keywords / Skills",
+        "multi": true,
+        "description": "Add a list of relevant skills or tags (e.g., Marketing, SEO, Design)."
+      },
+      {
+        "component": "container",
+        "name": "col2_socials",
+        "label": "Social Links",
+        "multi": true,
+        "description": "Add multiple social media links to the card.",
+        "fields": [
+          {
+            "component": "reference",
+            "name": "icon",
+            "label": "Social Icon Image"
+          },
+          {
+            "component": "aem-content",
+            "name": "url",
+            "label": "Social URL",
+            "placeholder": "https://linkedin.com/..."
+          }
+        ]
+      },
+      {
+        "component": "aem-content",
+        "name": "col2_link",
+        "label": "Primary Action Link"
+      },
+      {
+        "component": "text",
+        "name": "col2_linkText",
+        "label": "Primary Action Text",
+        "placeholder": "e.g., View Profile"
+      },
+      {
+        "component": "text",
+        "name": "col2_linkTitle",
+        "label": "Primary Action Title Attribute"
+      },
+      {
+        "component": "select",
+        "name": "col2_linkType",
+        "label": "Primary Action Button Style",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
