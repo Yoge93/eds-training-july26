@@ -57,10 +57,11 @@
         {
           "component": "text",
           "name": "title",
-          "label": "Title"
+          "label": "Title",
+          "value": "Karan P"
         },
         {
-          "component": "rictext",
+          "component": "richtext",
           "name": "description",
           "label": "Description"
         }
