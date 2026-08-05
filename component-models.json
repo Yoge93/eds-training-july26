@@ -355,7 +355,14 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "col1_fetchPriority",
+        "name": "col1_imageLoading",
+        "label": "Image loading",
+        "value": "high"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageFetchPriority",
         "label": "Fetch Priority",
         "value": "high"
       },
