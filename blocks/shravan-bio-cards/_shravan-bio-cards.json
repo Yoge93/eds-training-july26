@@ -74,16 +74,16 @@
                 {
                     "component": "text",
                     "valueType": "string",
-                    "name": "col1_imageLoading",
+                    "name": "col1_imagefetchPriority",
                     "label": "Image loading",
-                    "value": "high"
+                    "value": "low"
                 },
                 {
                     "component": "text",
                     "valueType": "string",
-                    "name": "col1_imageFetchPriority",
+                    "name": "col1_imageFetchpriority",
                     "label": "Fetch Priority",
-                    "value": "high"
+                    "value": "low"
                 },
                 {
                     "component": "text",
