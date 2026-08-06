@@ -1,8 +1,8 @@
 export default function decorate(block) {
 [...block.children].forEach((card) => {
   console.log(card);
-card.querySelectorAll('custom-block-node').forEach((div) => {
-    console.log(div);
-  });
+card.closest('custom-block-node').querySelectorAll('custom-block-item').forEach((item) => {
+    item.classList.add('cards-item');         
+});
 });
 }
