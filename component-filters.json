@@ -52,5 +52,9 @@
     "components": [
       "custom-block-item"
     ]
+  },
+  {
+    "id": "custom-block-item",
+    "components": []
   }
 ]

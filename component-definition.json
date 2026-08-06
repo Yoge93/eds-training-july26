@@ -183,7 +183,8 @@
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "Custom Block Item",
-                  "model": "custom-block-item"
+                  "model": "custom-block-item",
+                  "filter": "custom-block-item"
                 }
               }
             }
