@@ -1,10 +1,19 @@
 .custom-block{
     display: flex;  
-    gap: 20px;
+    gap: 50px;
     justify-content: center;  
+    width: 100%;
 }
-
+.custom-block .cards-item{
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+.custom-block .cards-item p{
+    padding: 0px 20px;
+}
 .custom-block .cards-item .cards-item-img{
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
