@@ -106,84 +106,88 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
 }
 
 /**
- * Extracts header configuration from block content
+ * Extracts nav items from the block's nav-item child elements
  * @param {Element} block The header block element
- * @returns {Object} Configuration object with logoImage, logoLink, logoAlt, searchPlaceholder, searchAction
- */
-function extractBlockConfig(block) {
-  const config = {};
-  
-  // Extract from block model attributes
-  const rows = block.querySelectorAll(':scope > div > div');
-  
-  rows.forEach((row) => {
-    const text = row.textContent.trim();
-    const link = row.querySelector('a');
-    const img = row.querySelector('img');
-    
-    if (img && !config.logoImage) {
-      config.logoImage = img;
-    }
-  });
-  
-  return config;
-}
-
-/**
- * Extracts nav items from the section that contains the header block
- * Looks for table/list structure with link and label
  * @returns {Array} Array of nav items with label and href
  */
 function extractNavItems(block) {
   const navItems = [];
   
-  // Find the section containing the header block
-  const section = block.closest('main > div');
-  if (!section) return navItems;
+  // Look for nav-item divs (child components/sections)
+  const navItemDivs = block.querySelectorAll(':scope > div.nav-item, :scope > .nav-item');
   
-  // Look for table or list structure after the header block
-  const tables = section.querySelectorAll('table');
-  const lists = section.querySelectorAll('ul:not(.nav-sections ul)');
-  
-  // Parse table (preferred structure)
-  if (tables.length > 0) {
-    const table = tables[0];
-    const rows = table.querySelectorAll('tbody tr');
+  navItemDivs.forEach((navItemDiv) => {
+    const link = navItemDiv.querySelector('a');
+    const label = navItemDiv.querySelector('p, span');
     
-    rows.forEach((row) => {
-      const cells = row.querySelectorAll('td');
-      if (cells.length >= 2) {
-        const linkCell = cells[0];
-        const labelCell = cells[1];
-        const link = linkCell.querySelector('a');
-        
-        if (link) {
-          navItems.push({
-            href: link.href,
-            label: labelCell.textContent.trim() || link.textContent.trim(),
-          });
+    if (link) {
+      navItems.push({
+        href: link.href,
+        label: label?.textContent?.trim() || link.textContent.trim(),
+      });
+    }
+  });
+  
+  // Fallback: if no explicit nav-item divs, look for tables with links
+  if (navItems.length === 0) {
+    const table = block.querySelector('table');
+    if (table) {
+      const rows = table.querySelectorAll('tbody tr');
+      rows.forEach((row) => {
+        const cells = row.querySelectorAll('td');
+        if (cells.length >= 1) {
+          const link = cells[0].querySelector('a');
+          const labelCell = cells[1];
+          
+          if (link) {
+            navItems.push({
+              href: link.href,
+              label: labelCell?.textContent?.trim() || link.textContent.trim(),
+            });
+          }
         }
-      }
-    });
-  }
-  
-  // Fallback: parse list items with links
-  if (navItems.length === 0 && lists.length > 0) {
-    const list = lists[0];
-    const items = list.querySelectorAll(':scope > li');
-    
-    items.forEach((item) => {
-      const link = item.querySelector('a');
-      if (link) {
-        navItems.push({
-          href: link.href,
-          label: link.textContent.trim(),
-        });
-      }
-    });
+      });
+    }
   }
   
   return navItems;
+}
+
+/**
+ * Extracts configuration from the block
+ * @param {Element} block The header block element
+ * @returns {Object} Configuration with logo, search settings
+ */
+function extractBlockConfig(block) {
+  const config = {
+    logoImage: null,
+    logoLink: null,
+    logoAlt: 'Logo',
+    searchPlaceholder: 'Search...',
+    searchAction: '/search',
+  };
+  
+  // Extract logo image
+  const logoImg = block.querySelector('img');
+  if (logoImg) {
+    config.logoImage = logoImg.cloneNode(true);
+    config.logoAlt = logoImg.getAttribute('alt') || 'Logo';
+  }
+  
+  // Extract logo link (anchor containing image or standalone)
+  const logoLink = block.querySelector('a img')?.closest('a') || block.querySelector(':scope > a:first-of-type');
+  if (logoLink) {
+    config.logoLink = logoLink.href;
+  }
+  
+  // Extract search config from data attributes (if set by model)
+  const searchPlaceholder = block.getAttribute('data-search-placeholder');
+  const searchAction = block.getAttribute('data-search-action');
+  
+  if (searchPlaceholder) config.searchPlaceholder = searchPlaceholder;
+  if (searchAction) config.searchAction = searchAction;
+  
+  return config;
 }
 
 /**
@@ -191,22 +195,12 @@ function extractNavItems(block) {
  * @param {Element} block The header block element
  */
 export default async function decorate(block) {
-  // Extract logo image and search config from block
+  // Extract configuration and nav items from block
   const blockConfig = extractBlockConfig(block);
   const navItems = extractNavItems(block);
   
-  // Get logo from first image in block
-  let logoImg = blockConfig.logoImage;
-  let logoLink = null;
-  let logoAlt = 'Logo';
-  let searchPlaceholder = 'Search...';
-  let searchAction = '/search';
-  
-  // Look for link containing image (logo link)
-  const brandLinkEl = block.querySelector('a > img');
-  if (brandLinkEl) {
-    logoLink = brandLinkEl.closest('a');
-  }
+  // Get config values
+  const { logoImage, logoLink, logoAlt, searchPlaceholder, searchAction } = blockConfig;
   
   // Create nav structure
   block.textContent = '';
@@ -216,17 +210,22 @@ export default async function decorate(block) {
   // Create nav-brand (logo)
   const navBrand = document.createElement('div');
   navBrand.className = 'nav-brand';
-  if (logoLink) {
-    navBrand.appendChild(logoLink.cloneNode(true));
-  } else if (logoImg) {
-    navBrand.appendChild(logoImg.cloneNode(true));
+  if (logoLink && logoImage) {
+    // Create linked logo
+    const link = document.createElement('a');
+    link.href = logoLink;
+    link.appendChild(logoImage);
+    navBrand.appendChild(link);
+  } else if (logoImage) {
+    // Logo without link
+    navBrand.appendChild(logoImage);
   } else {
-    // Create empty placeholder
-    const emptyBrand = document.createElement('div');
-    emptyBrand.style.width = '128px';
-    emptyBrand.style.height = '40px';
-    emptyBrand.textContent = 'Logo';
-    navBrand.appendChild(emptyBrand);
+    // Placeholder
+    const placeholder = document.createElement('div');
+    placeholder.style.width = '128px';
+    placeholder.style.height = '40px';
+    placeholder.textContent = 'Logo';
+    navBrand.appendChild(placeholder);
   }
   nav.appendChild(navBrand);
   

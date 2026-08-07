@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navigation Block Demo - Authorable</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      padding-top: 80px;
+    }
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    p {
+      line-height: 1.6;
+      color: #666;
+      margin-bottom: 10px;
+    }
+    code {
+      background: #f5f5f5;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+      margin: 10px 0;
+      font-size: 12px;
+    }
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header">
+      <!-- Navigation block with authorable content -->
+      <div>
+        <!-- Logo Section -->
+        <a href="/"><img src="https://via.placeholder.com/150x40?text=Logo" alt="Company Logo" /></a>
+      </div>
+
+      <!-- Navigation Items (as nav-item child components) -->
+      <div class="nav-item">
+        <a href="/homeowners">Home owners</a>
+        <p>Home owners</p>
+      </div>
+      <div class="nav-item">
+        <a href="/products">Products</a>
+        <p>Products</p>
+      </div>
+      <div class="nav-item">
+        <a href="/get-in-touch">Get in touch</a>
+        <p>Get in touch</p>
+      </div>
+      <div class="nav-item">
+        <a href="/resources">Resources</a>
+        <p>Resource</p>
+      </div>
+      <div class="nav-item">
+        <a href="/contact">Contact</a>
+        <p>Contact</p>
+      </div>
+      <div class="nav-item">
+        <a href="/contractor-app">Contractor app</a>
+        <p>Contractor app</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Navigation Block - Fully Authorable</h2>
+      <p>This header uses the new <strong>Navigation</strong> block with fully authorable components. Authors configure all content directly in the block without needing separate content sections.</p>
+    </section>
+
+    <section>
+      <h2>Block Structure</h2>
+      <p>The Navigation block consists of three main authorable sections:</p>
+      <ol>
+        <li>
+          <strong>Logo Configuration</strong>
+          <ul>
+            <li><code>logoImage</code> - Reference field to select logo image</li>
+            <li><code>logoAlt</code> - Alt text for accessibility</li>
+            <li><code>logoLink</code> - Destination URL/page when logo is clicked</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Navigation Items</strong>
+          <ul>
+            <li><code>navItems</code> - Multi-value reference field for nav-item components</li>
+            <li>Each nav-item component has:
+              <ul>
+                <li><code>navItemLink</code> - Link destination (aem-content)</li>
+                <li><code>navItemLabel</code> - Display label text</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Search Configuration</strong>
+          <ul>
+            <li><code>searchPlaceholder</code> - Text shown in search input box</li>
+            <li><code>searchAction</code> - URL where search form will be submitted</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>How Authors Use This</h2>
+      <p>In Universal Editor, authors follow these steps:</p>
+      <ol>
+        <li><strong>Add Navigation Block</strong> to a page section</li>
+        <li><strong>Configure Logo Section:</strong>
+          <ul>
+            <li>Click "Logo Image" field and select/upload logo image</li>
+            <li>Set "Logo Alt Text" for accessibility</li>
+            <li>Set "Logo Link Destination" to where logo should link (e.g., homepage)</li>
+          </ul>
+        </li>
+        <li><strong>Add Navigation Items:</strong>
+          <ul>
+            <li>In "Navigation Items" section, click "+" to add new nav item</li>
+            <li>Select or create a nav-item component</li>
+            <li>Configure each nav item:
+              <ul>
+                <li>Set link destination (page or URL)</li>
+                <li>Set label text (e.g., "Products", "Contact")</li>
+              </ul>
+            </li>
+            <li>Repeat for all navigation items</li>
+          </ul>
+        </li>
+        <li><strong>Configure Search:</strong>
+          <ul>
+            <li>Set "Search Placeholder Text" (e.g., "Search...")</li>
+            <li>Set "Search Form Action URL" (where search queries go)</li>
+          </ul>
+        </li>
+        <li><strong>Publish</strong> - Navigation is live on page</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Frontend Rendering</h2>
+      <p>The <code>header.js</code> script automatically:</p>
+      <ol>
+        <li>Extracts logo image and configured link from block content</li>
+        <li>Finds all <code>nav-item</code> divs and extracts link + label pairs</li>
+        <li>Reads search configuration from block attributes</li>
+        <li>Builds responsive navigation structure:
+          <ul>
+            <li><strong>Desktop (≥900px):</strong> Logo on left | Navigation items in center | Search on right (all visible)</li>
+            <li><strong>Mobile (&lt;900px):</strong> Logo and hamburger menu visible | Navigation items hidden in menu</li>
+          </ul>
+        </li>
+        <li>Attaches event listeners for menu toggle, navigation clicks, and search submission</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Example: Navigation Item Component</h2>
+      <p>Each navigation item is a separate <code>nav-item</code> component defined in the model:</p>
+      <pre><code>{
+  "id": "nav-item",
+  "fields": [
+    {
+      "component": "aem-content",
+      "name": "navItemLink",
+      "label": "Link",
+      "required": true
+    },
+    {
+      "component": "text",
+      "valueType": "string",
+      "name": "navItemLabel",
+      "label": "Label Text",
+      "required": true,
+      "description": "Display text for the navigation item"
+    }
+  ]
+}</code></pre>
+      <p>Authors add multiple nav-item components (Home owners, Products, Get in touch, Resources, Contact, Contractor app) to build the complete navigation.</p>
+    </section>
+
+    <section>
+      <h2>Advantages of This Approach</h2>
+      <ul>
+        <li><strong>Fully Authorable:</strong> No content parsing or table structures needed</li>
+        <li><strong>Flexible:</strong> Easy to add, remove, or reorder navigation items</li>
+        <li><strong>Maintainable:</strong> Clear separation between logo config, nav items, and search config</li>
+        <li><strong>Scalable:</strong> Can easily extend nav items with additional fields (icon, target, CSS classes, etc.)</li>
+        <li><strong>Accessible:</strong> Structured data improves SEO and enables better accessibility features</li>
+        <li><strong>Consistent UX:</strong> Universal Editor provides consistent authoring interface</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Testing the Navigation</h2>
+      <p><strong>Desktop View (width ≥ 900px):</strong></p>
+      <ul>
+        <li>✓ Logo visible on left side with clickable link</li>
+        <li>✓ Navigation items displayed horizontally in center</li>
+        <li>✓ Search bar visible on right side</li>
+        <li>✓ Hamburger menu button NOT visible</li>
+      </ul>
+      <p><strong>Mobile View (width &lt; 900px):</strong></p>
+      <ul>
+        <li>✓ Hamburger menu button visible on left</li>
+        <li>✓ Logo visible in center</li>
+        <li>✓ Navigation items hidden by default</li>
+        <li>✓ Click hamburger to show/hide navigation menu</li>
+        <li>✓ Search bar accessible within menu</li>
+      </ul>
+      <p><strong>Interactivity:</strong></p>
+      <ul>
+        <li>✓ Click logo → navigates to configured URL</li>
+        <li>✓ Click nav item → navigates to configured page</li>
+        <li>✓ Type search text and press Enter → form submits to configured action URL with query parameter</li>
+        <li>✓ Press ESC key → closes mobile menu</li>
+        <li>✓ Tab navigation → keyboard accessible menu items</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Next Steps</h2>
+      <ol>
+        <li>Run <code>npm run build:json</code> to regenerate component definitions</li>
+        <li>Start dev server: <code>npx -y @adobe/aem-cli up --no-open --html-folder drafts</code></li>
+        <li>Open <code>http://localhost:3000/navigation-demo</code> to view this demo</li>
+        <li>Verify desktop and mobile layouts are correct</li>
+        <li>Test logo click, navigation clicks, and search submission</li>
+      </ol>
+    </section>
+  </main>
+</body>
+</html>

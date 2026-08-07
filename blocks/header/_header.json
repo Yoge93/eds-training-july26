@@ -1,16 +1,27 @@
 {
   "definitions": [
     {
-      "title": "Header Block",
+      "title": "Navigation",
       "id": "header",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block",
             "template": {
-              "name": "Header Block",
-              "model": "header-config"
+              "name": "Navigation",
+              "model": "navigation-block"
             }
+          }
+        }
+      }
+    },
+    {
+      "title": "Navigation Item",
+      "id": "nav-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block"
           }
         }
       }
@@ -18,45 +29,99 @@
   ],
   "models": [
     {
-      "id": "header-config",
+      "id": "navigation-block",
       "fields": [
         {
-          "component": "reference",
-          "valueType": "string",
-          "name": "logoImage",
-          "label": "Logo Image",
-          "multi": false
+          "component": "section",
+          "name": "logo_section",
+          "label": "Logo Configuration",
+          "fields": [
+            {
+              "component": "reference",
+              "valueType": "string",
+              "name": "logoImage",
+              "label": "Logo Image",
+              "multi": false
+            },
+            {
+              "component": "text",
+              "valueType": "string",
+              "name": "logoAlt",
+              "label": "Logo Alt Text",
+              "value": "Logo"
+            },
+            {
+              "component": "aem-content",
+              "name": "logoLink",
+              "label": "Logo Link Destination",
+              "description": "Link for logo click"
+            }
+          ]
         },
         {
-          "component": "text",
-          "valueType": "string",
-          "name": "logoAlt",
-          "label": "Logo Alt Text",
-          "value": "Logo"
+          "component": "section",
+          "name": "nav_items_section",
+          "label": "Navigation Items",
+          "fields": [
+            {
+              "component": "reference",
+              "valueType": "string",
+              "name": "navItems",
+              "label": "Navigation Items",
+              "multi": true,
+              "filter": "nav-item",
+              "description": "Add navigation items by referencing nav-item components"
+            }
+          ]
         },
+        {
+          "component": "section",
+          "name": "search_section",
+          "label": "Search Configuration",
+          "fields": [
+            {
+              "component": "text",
+              "valueType": "string",
+              "name": "searchPlaceholder",
+              "label": "Search Placeholder Text",
+              "value": "Search..."
+            },
+            {
+              "component": "text",
+              "valueType": "string",
+              "name": "searchAction",
+              "label": "Search Form Action URL",
+              "value": "/search",
+              "description": "URL where search query will be submitted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nav-item",
+      "fields": [
         {
           "component": "aem-content",
-          "name": "logoLink",
-          "label": "Logo Link Destination",
-          "description": "URL or page link for logo click"
+          "name": "navItemLink",
+          "label": "Link",
+          "required": true
         },
         {
           "component": "text",
           "valueType": "string",
-          "name": "searchPlaceholder",
-          "label": "Search Placeholder Text",
-          "value": "Search..."
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "searchAction",
-          "label": "Search Form Action URL",
-          "value": "/search",
-          "description": "URL where search query will be submitted"
+          "name": "navItemLabel",
+          "label": "Label Text",
+          "required": true,
+          "description": "Display text for the navigation item"
         }
       ]
     }
   ],
-  "filters": []
+  "filters": [
+    {
+      "id": "nav-item",
+      "components": ["nav-item"]
+    }
+  ]
 }

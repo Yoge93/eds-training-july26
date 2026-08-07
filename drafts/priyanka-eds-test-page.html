@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Priyanka's EDS Test Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    main {
+      padding: 40px 20px;
+    }
+    section {
+      max-width: 1200px;
+      margin: 0 auto 60px;
+    }
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #000;
+    }
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #222;
+      margin-top: 40px;
+    }
+    h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #444;
+      margin-top: 30px;
+    }
+    p {
+      margin-bottom: 15px;
+      line-height: 1.8;
+      color: #555;
+    }
+    .intro-text {
+      font-size: 20px;
+      color: #666;
+      margin-bottom: 30px;
+    }
+    code {
+      background: #f5f5f5;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'Monaco', 'Courier New', monospace;
+      font-size: 14px;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+      margin: 15px 0;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    ul, ol {
+      margin-left: 25px;
+      margin-bottom: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .feature-box {
+      background: #f9f9f9;
+      border-left: 4px solid #0066cc;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+    .feature-box h4 {
+      margin-bottom: 10px;
+      color: #0066cc;
+    }
+    .test-instructions {
+      background: #fffbf0;
+      border-left: 4px solid #ff9800;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+    .test-instructions h4 {
+      margin-bottom: 10px;
+      color: #ff9800;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header">
+      <!-- Navigation Block - Authorable -->
+      <div>
+        <!-- Logo: Click to go home -->
+        <a href="/"><img src="https://via.placeholder.com/150x40/0066cc/ffffff?text=MyCompany" alt="MyCompany Logo" /></a>
+      </div>
+
+      <!-- Navigation Items -->
+      <div class="nav-item">
+        <a href="/homeowners">Home owners</a>
+        <p>Home owners</p>
+      </div>
+      <div class="nav-item">
+        <a href="/products">Products</a>
+        <p>Products</p>
+      </div>
+      <div class="nav-item">
+        <a href="/get-in-touch">Get in touch</a>
+        <p>Get in touch</p>
+      </div>
+      <div class="nav-item">
+        <a href="/resources">Resource</a>
+        <p>Resource</p>
+      </div>
+      <div class="nav-item">
+        <a href="/contact">Contact</a>
+        <p>Contact</p>
+      </div>
+      <div class="nav-item">
+        <a href="/contractor-app">Contractor app</a>
+        <p>Contractor app</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h1>Welcome to Priyanka's EDS Test Page</h1>
+      <p class="intro-text">This page demonstrates the fully authorable Navigation block with dynamic logo, navigation items, and search functionality.</p>
+    </section>
+
+    <section>
+      <h2>Navigation Block Features</h2>
+      
+      <div class="feature-box">
+        <h4>✓ Fully Authorable</h4>
+        <p>All navigation elements (logo, items, search) are configured through the block model in Universal Editor. No content parsing required.</p>
+      </div>
+
+      <div class="feature-box">
+        <h4>✓ Responsive Design</h4>
+        <p>Desktop view shows logo, nav items, and search horizontally. Mobile view (<900px) collapses into hamburger menu.</p>
+      </div>
+
+      <div class="feature-box">
+        <h4>✓ Accessible</h4>
+        <p>Full keyboard navigation support, ARIA labels, and semantic HTML for screen readers.</p>
+      </div>
+
+      <div class="feature-box">
+        <h4>✓ Flexible</h4>
+        <p>Easy to add, remove, or reorder navigation items without touching the code.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Navigation Configuration</h2>
+      <p>The Navigation block is configured with three sections:</p>
+      
+      <h3>1. Logo Configuration</h3>
+      <ul>
+        <li><strong>Logo Image:</strong> MyCompany Logo (150x40px)</li>
+        <li><strong>Logo Alt Text:</strong> MyCompany Logo</li>
+        <li><strong>Logo Link:</strong> Home page (/)</li>
+      </ul>
+
+      <h3>2. Navigation Items</h3>
+      <p>The following navigation items are configured:</p>
+      <ul>
+        <li><strong>Home owners</strong> → /homeowners</li>
+        <li><strong>Products</strong> → /products</li>
+        <li><strong>Get in touch</strong> → /get-in-touch</li>
+        <li><strong>Resource</strong> → /resources</li>
+        <li><strong>Contact</strong> → /contact</li>
+        <li><strong>Contractor app</strong> → /contractor-app</li>
+      </ul>
+
+      <h3>3. Search Configuration</h3>
+      <ul>
+        <li><strong>Placeholder Text:</strong> Search...</li>
+        <li><strong>Form Action URL:</strong> /search</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="test-instructions">
+        <h4>🧪 Testing Instructions</h4>
+        
+        <h3>Desktop Testing (≥900px)</h3>
+        <ol>
+          <li>Resize browser to desktop width (1200px or wider)</li>
+          <li>Verify you see:
+            <ul>
+              <li>Logo on the left side with MyCompany branding</li>
+              <li>Navigation items in a horizontal row in the center</li>
+              <li>Search bar on the right side with magnifying glass icon</li>
+              <li>NO hamburger menu button</li>
+            </ul>
+          </li>
+          <li>Click on the logo → should navigate to home (/)</li>
+          <li>Click on each nav item → should navigate to that page</li>
+          <li>Type text in search box and press Enter → should submit to /search</li>
+        </ol>
+
+        <h3>Mobile Testing (&lt;900px)</h3>
+        <ol>
+          <li>Open DevTools (F12) and toggle responsive mode</li>
+          <li>Set width to mobile size (e.g., 375px)</li>
+          <li>Verify you see:
+            <ul>
+              <li>Hamburger menu icon on the left</li>
+              <li>Logo in the center/header area</li>
+              <li>Navigation items are HIDDEN</li>
+              <li>Search bar is accessible in the menu</li>
+            </ul>
+          </li>
+          <li>Click hamburger menu → navigation items appear</li>
+          <li>Click a nav item → should navigate to that page</li>
+          <li>Click hamburger again → menu closes</li>
+          <li>Press ESC key → menu should close</li>
+        </ol>
+
+        <h3>Keyboard Accessibility Testing</h3>
+        <ol>
+          <li>Press <code>Tab</code> to navigate through navigation items</li>
+          <li>Press <code>Enter</code> on a nav item → navigates to that page</li>
+          <li>Press <code>Escape</code> when mobile menu is open → closes menu</li>
+          <li>Tab should properly focus on search input and submit button</li>
+        </ol>
+      </div>
+    </section>
+
+    <section>
+      <h2>Block Model Structure</h2>
+      <p>The Navigation block model includes:</p>
+      
+      <h3>Logo Configuration Section</h3>
+      <pre><code>{
+  "component": "section",
+  "name": "logo_section",
+  "label": "Logo Configuration",
+  "fields": [
+    {
+      "component": "reference",
+      "name": "logoImage",
+      "label": "Logo Image"
+    },
+    {
+      "component": "text",
+      "name": "logoAlt",
+      "label": "Logo Alt Text"
+    },
+    {
+      "component": "aem-content",
+      "name": "logoLink",
+      "label": "Logo Link Destination"
+    }
+  ]
+}</code></pre>
+
+      <h3>Navigation Items Section</h3>
+      <pre><code>{
+  "component": "section",
+  "name": "nav_items_section",
+  "label": "Navigation Items",
+  "fields": [
+    {
+      "component": "reference",
+      "name": "navItems",
+      "label": "Navigation Items",
+      "multi": true,
+      "filter": "nav-item"
+    }
+  ]
+}</code></pre>
+
+      <h3>Navigation Item Component</h3>
+      <pre><code>{
+  "id": "nav-item",
+  "fields": [
+    {
+      "component": "aem-content",
+      "name": "navItemLink",
+      "label": "Link",
+      "required": true
+    },
+    {
+      "component": "text",
+      "name": "navItemLabel",
+      "label": "Label Text",
+      "required": true
+    }
+  ]
+}</code></pre>
+    </section>
+
+    <section>
+      <h2>How to Modify Navigation in Universal Editor</h2>
+      <ol>
+        <li>Open this page in Universal Editor</li>
+        <li>Click on the Navigation block</li>
+        <li>
+          <strong>To change the logo:</strong>
+          <ul>
+            <li>Expand "Logo Configuration" section</li>
+            <li>Update logo image, alt text, and link destination</li>
+          </ul>
+        </li>
+        <li>
+          <strong>To add/edit navigation items:</strong>
+          <ul>
+            <li>Expand "Navigation Items" section</li>
+            <li>Click "+" to add new nav item</li>
+            <li>Select or create a nav-item component</li>
+            <li>Set link destination and label text</li>
+            <li>Drag to reorder or click "X" to delete</li>
+          </ul>
+        </li>
+        <li>
+          <strong>To change search settings:</strong>
+          <ul>
+            <li>Expand "Search Configuration" section</li>
+            <li>Update placeholder text and form action URL</li>
+          </ul>
+        </li>
+        <li>Save and publish your changes</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Sample Content for Navigation</h2>
+      <p>Use these sample pages when setting up navigation items:</p>
+      <ul>
+        <li><a href="/homeowners">/homeowners</a> - Information for homeowners</li>
+        <li><a href="/products">/products</a> - Product listing page</li>
+        <li><a href="/get-in-touch">/get-in-touch</a> - Contact form page</li>
+        <li><a href="/resources">/resources</a> - Resources and documentation</li>
+        <li><a href="/contact">/contact</a> - Contact information page</li>
+        <li><a href="/contractor-app">/contractor-app</a> - Contractor application portal</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Next Steps</h2>
+      <ol>
+        <li>Test the navigation on different screen sizes (use the testing instructions above)</li>
+        <li>Verify all links are working correctly</li>
+        <li>Check mobile responsiveness at <900px breakpoint</li>
+        <li>Test search form submission</li>
+        <li>Once satisfied, create the corresponding pages for each navigation item</li>
+        <li>Publish to production</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Troubleshooting</h2>
+      
+      <h3>Navigation not showing?</h3>
+      <ul>
+        <li>Check that nav-item divs exist in the page markup</li>
+        <li>Verify each nav-item has both <code>&lt;a&gt;</code> (link) and <code>&lt;p&gt;</code> (label) elements</li>
+        <li>Check browser console (F12) for JavaScript errors</li>
+      </ul>
+
+      <h3>Hamburger menu not appearing on mobile?</h3>
+      <ul>
+        <li>Ensure viewport width is less than 900px</li>
+        <li>Clear browser cache (Ctrl+Shift+R in Chrome)</li>
+        <li>Check that header.css is being loaded</li>
+      </ul>
+
+      <h3>Search not working?</h3>
+      <ul>
+        <li>Verify the search form action URL is correct</li>
+        <li>Check that /search page exists or is properly configured</li>
+        <li>Test by typing text and pressing Enter</li>
+      </ul>
+
+      <h3>Styling looks off?</h3>
+      <ul>
+        <li>Check that header.css file is loaded</li>
+        <li>Verify no CSS conflicts with page styles</li>
+        <li>Clear browser cache and reload</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
