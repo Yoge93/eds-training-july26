@@ -1,5 +1,5 @@
 export default function decorate(block) {
-  const slides = [...block.querySelectorAll(':scope > div')];
+  const slides = [...block.querySelectorAll(':scope > div')]; // ':scope > div selects only direct children of the block'
 
   // Build slide elements
   const track = document.createElement('div');
