@@ -8,7 +8,8 @@
     border: 2px solid #ccc;
     border-radius: 10px;
 }
-.custom-block .cards-item p{
+.custom-block .cards-item p,
+.custom-block .cards-item h5{
     padding: 0px 20px;
 }
 .custom-block .cards-item .cards-item-img{

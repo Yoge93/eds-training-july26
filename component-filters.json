@@ -33,6 +33,12 @@
     ]
   },
   {
+    "id": "carousel-block",
+    "components": [
+      "carousel-item"
+    ]
+  },
+  {
     "id": "columns",
     "components": [
       "column"

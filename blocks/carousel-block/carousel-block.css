@@ -1,0 +1,46 @@
+.carousel-block {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-block .carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+  will-change: transform;
+}
+
+.carousel-block .carousel-slide {
+  min-width: 100%;
+  flex-shrink: 0;
+}
+
+.carousel-block .carousel-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.carousel-block .carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.carousel-block .carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ccc;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.3s;
+}
+
+.carousel-block .carousel-dot.active,
+.carousel-block .carousel-dot:hover {
+  background-color: #333;
+}
