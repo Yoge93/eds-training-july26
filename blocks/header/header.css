@@ -228,17 +228,17 @@ header nav .nav-sections ul > li > ul > li {
     margin: 0;
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li {
+  header nav .nav-sections ul > li {
     flex: 0 1 auto;
     position: relative;
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li > ul {
+  header nav .nav-sections ul > li > ul {
     display: none;
     position: relative;
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
+  header nav .nav-sections ul > li[aria-expanded='true'] > ul {
     display: block;
     position: absolute;
     left: -24px;
@@ -249,7 +249,7 @@ header nav .nav-sections ul > li > ul > li {
     white-space: initial;
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
+  header nav .nav-sections ul > li > ul::before {
     content: '';
     position: absolute;
     top: -8px;
@@ -261,12 +261,70 @@ header nav .nav-sections ul > li > ul > li {
     border-bottom: 8px solid var(--light-color);
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
+  header nav .nav-sections ul > li > ul > li {
     padding: 8px 0;
   }
 }
 
-/* tools */
+/* tools - search bar */
 header nav .nav-tools {
   grid-area: tools;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+header nav .search-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid currentcolor;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+header nav .search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: var(--body-font-size-s);
+  font-family: inherit;
+  color: inherit;
+  padding: 4px;
+  min-width: 150px;
+}
+
+header nav .search-input::placeholder {
+  color: var(--text-color, currentcolor);
+  opacity: 0.6;
+}
+
+header nav .search-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1;
+  color: inherit;
+}
+
+header nav .search-button:hover {
+  opacity: 0.7;
+}
+
+@media (width >= 900px) {
+  header nav .nav-tools {
+    grid-area: tools;
+  }
+
+  header nav[aria-expanded='true'] .nav-tools {
+    align-self: end;
+  }
+}
+
+.header .header-bg {
+  width: 100%;
+  height: 100px;
+  background-color: #000;
 }

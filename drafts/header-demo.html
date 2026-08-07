@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Header Demo - Dynamic Navigation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      padding-top: 80px;
+    }
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    p {
+      line-height: 1.6;
+      color: #666;
+      margin-bottom: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table td {
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+    table td a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    table td a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header">
+      <div class="header block">
+        <div>
+          <a href="/"><img src="https://via.placeholder.com/150x40?text=Logo" alt="Company Logo" /></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Navigation Items (Table Format)</h2>
+      <p>The header block will parse this table to extract navigation items. Each row contains a link and label.</p>
+      <table>
+        <tbody>
+          <tr>
+            <td><a href="/homeowners">Home owners</a></td>
+            <td>Home owners section</td>
+          </tr>
+          <tr>
+            <td><a href="/products">Products</a></td>
+            <td>Our products</td>
+          </tr>
+          <tr>
+            <td><a href="/get-in-touch">Get in touch</a></td>
+            <td>Contact us</td>
+          </tr>
+          <tr>
+            <td><a href="/resources">Resource</a></td>
+            <td>Resources and guides</td>
+          </tr>
+          <tr>
+            <td><a href="/contact">Contact</a></td>
+            <td>Contact information</td>
+          </tr>
+          <tr>
+            <td><a href="/contractor-app">Contractor app</a></td>
+            <td>Contractor application</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Page Content</h2>
+      <p>This is a demo page showing how the header with dynamic navigation works.</p>
+      <p>The header includes:</p>
+      <ul>
+        <li><strong>Logo</strong> (left side) - clickable, configurable link destination</li>
+        <li><strong>Navigation Menu</strong> (center) - dynamically parsed from the table above</li>
+        <li><strong>Search Bar</strong> (right side) - with configurable action URL</li>
+        <li><strong>Mobile Hamburger Menu</strong> - appears at screen widths &lt; 900px</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>How It Works</h2>
+      <p>
+        <strong>Content Structure:</strong> Authors create a table with two columns:
+      </p>
+      <ol>
+        <li>Column 1: Link element (e.g., &lt;a href="/page"&gt;Link text&lt;/a&gt;)</li>
+        <li>Column 2: Label text (optional, or can use link text)</li>
+      </ol>
+      <p>
+        <strong>Block Model:</strong> The header block has authorable fields for:
+      </p>
+      <ul>
+        <li>Logo Image (reference to image asset)</li>
+        <li>Logo Alt Text</li>
+        <li>Logo Link Destination (URL or page link)</li>
+        <li>Search Placeholder Text</li>
+        <li>Search Form Action URL</li>
+      </ul>
+      <p>
+        <strong>JavaScript:</strong> The header.js extracts the logo from the block and navigation items from the table, then builds a responsive navigation structure with hamburger menu for mobile.
+      </p>
+    </section>
+
+    <section>
+      <h2>Testing Instructions</h2>
+      <p><strong>Desktop (≥900px):</strong></p>
+      <ul>
+        <li>Logo should appear on the left</li>
+        <li>Navigation items should appear in a row</li>
+        <li>Search bar should appear on the right</li>
+        <li>Hamburger menu should be hidden</li>
+      </ul>
+      <p><strong>Mobile (&lt;900px):</strong></p>
+      <ul>
+        <li>Hamburger menu button should appear</li>
+        <li>Navigation items should be hidden until menu is clicked</li>
+        <li>Search bar should be accessible in the menu</li>
+        <li>Clicking hamburger should toggle menu visibility</li>
+      </ul>
+      <p><strong>Interactivity:</strong></p>
+      <ul>
+        <li>Click logo → navigates to configured URL</li>
+        <li>Click nav items → navigates to respective pages</li>
+        <li>Type in search → submit goes to configured search action URL with query parameter</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
