@@ -8,6 +8,12 @@
   display: flex;
   transition: transform 0.4s ease;
   will-change: transform;
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel-block .carousel-track:active {
+  cursor: grabbing;
 }
 
 .carousel-block .carousel-slide {
@@ -20,6 +26,8 @@
   width: 100%;
   height: auto;
   object-fit: cover;
+  pointer-events: none; /* prevent img drag interfering with carousel drag */
+  -webkit-user-drag: none;
 }
 
 .carousel-block .carousel-dots {
