@@ -107,6 +107,7 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
 
 /**
  * Extracts nav items from the block's nav-item child elements
+ * Each nav-item has a separate link node and text node (both authorable)
  * @param {Element} block The header block element
  * @returns {Array} Array of nav items with label and href
  */
@@ -114,16 +115,30 @@ function extractNavItems(block) {
   const navItems = [];
   
   // Look for nav-item divs (child components/sections)
-  const navItemDivs = block.querySelectorAll(':scope > div.nav-item, :scope > .nav-item');
+  const navItemDivs = block.querySelectorAll(':scope > div[class*="nav-item"], :scope > .nav-item');
   
   navItemDivs.forEach((navItemDiv) => {
-    const link = navItemDiv.querySelector('a');
-    const label = navItemDiv.querySelector('p, span');
+    // Extract link node (authorable)
+    // Look for anchor tag - this is the link node that authors configure
+    const linkNode = navItemDiv.querySelector('a');
     
-    if (link) {
+    if (!linkNode) return; // Skip if no link found
+    
+    const href = linkNode.href;
+    
+    // Extract text node (authorable)
+    // Look for text content in paragraph, span, or other text elements
+    // Priority: p tag > span tag > strong/em > link text
+    let textNode = navItemDiv.querySelector('p');
+    if (!textNode) textNode = navItemDiv.querySelector('span');
+    if (!textNode) textNode = navItemDiv.querySelector('strong, em, b');
+    
+    const label = textNode?.textContent?.trim() || linkNode.textContent.trim();
+    
+    if (href && label) {
       navItems.push({
-        href: link.href,
-        label: label?.textContent?.trim() || link.textContent.trim(),
+        href,
+        label,
       });
     }
   });

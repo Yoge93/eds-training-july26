@@ -240,8 +240,52 @@
     </section>
 
     <section>
-      <h2>Block Model Structure</h2>
-      <p>The Navigation block model includes:</p>
+      <h2>Navigation Item Structure - Text & Link Nodes</h2>
+      <p>Each navigation item is made up of two separate <strong>authorable nodes</strong>:</p>
+      
+      <div class="feature-box">
+        <h4>1. Link Node (Authorable)</h4>
+        <p><code>&lt;a href="..."&gt;...&lt;/a&gt;</code></p>
+        <p>Authors select or create a link using the <code>Navigation Link</code> field. This node stores the URL/page destination.</p>
+      </div>
+
+      <div class="feature-box">
+        <h4>2. Text Node (Authorable)</h4>
+        <p><code>&lt;p&gt;...&lt;/p&gt;</code> or <code>&lt;span&gt;...&lt;/span&gt;</code></p>
+        <p>Authors enter display text using the <code>Navigation Text</code> field. This is the text that users see and can click.</p>
+      </div>
+
+      <h3>Example Markup:</h3>
+      <pre><code>&lt;div class="nav-item"&gt;
+  &lt;!-- Link Node (authorable) --&gt;
+  &lt;a href="/products"&gt;Products&lt;/a&gt;
+  
+  &lt;!-- Text Node (authorable) --&gt;
+  &lt;p&gt;Products&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+      <h3>How Authors Configure Each Node:</h3>
+      <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+        <tr style="background: #f5f5f5;">
+          <th style="padding: 10px; border: 1px solid #ddd; text-align: left;"><strong>Node</strong></th>
+          <th style="padding: 10px; border: 1px solid #ddd; text-align: left;"><strong>Field Name</strong></th>
+          <th style="padding: 10px; border: 1px solid #ddd; text-align: left;"><strong>Input Type</strong></th>
+          <th style="padding: 10px; border: 1px solid #ddd; text-align: left;"><strong>Example</strong></th>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #ddd;">Link Node</td>
+          <td style="padding: 10px; border: 1px solid #ddd;"><code>Navigation Link</code></td>
+          <td style="padding: 10px; border: 1px solid #ddd;">aem-content (link picker)</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">/products or https://example.com</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #ddd;">Text Node</td>
+          <td style="padding: 10px; border: 1px solid #ddd;"><code>Navigation Text</code></td>
+          <td style="padding: 10px; border: 1px solid #ddd;">text (text input)</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">Products</td>
+        </tr>
+      </table>
+    </section>
       
       <h3>Logo Configuration Section</h3>
       <pre><code>{
@@ -290,17 +334,25 @@
     {
       "component": "aem-content",
       "name": "navItemLink",
-      "label": "Link",
-      "required": true
+      "label": "Navigation Link",
+      "required": true,
+      "description": "Select or create a link (e.g., internal page or external URL) - this is the authorable link node"
     },
     {
       "component": "text",
+      "valueType": "string",
       "name": "navItemLabel",
-      "label": "Label Text",
-      "required": true
+      "label": "Navigation Text",
+      "required": true,
+      "description": "Enter the display text for this navigation item - this is the authorable text node"
     }
   ]
 }</code></pre>
+      <p>Each navigation item has two clearly separate, authorable fields:</p>
+      <ul>
+        <li><strong>Navigation Link</strong> — The URL or page destination (link node)</li>
+        <li><strong>Navigation Text</strong> — The visible text users see and click (text node)</li>
+      </ul>
     </section>
 
     <section>
@@ -321,7 +373,12 @@
             <li>Expand "Navigation Items" section</li>
             <li>Click "+" to add new nav item</li>
             <li>Select or create a nav-item component</li>
-            <li>Set link destination and label text</li>
+            <li>Configure the two authorable nodes:
+              <ul>
+                <li><strong>Navigation Link</strong> (link node) — Click link picker, select page or enter URL</li>
+                <li><strong>Navigation Text</strong> (text node) — Enter the display text (e.g., "Products", "Contact")</li>
+              </ul>
+            </li>
             <li>Drag to reorder or click "X" to delete</li>
           </ul>
         </li>

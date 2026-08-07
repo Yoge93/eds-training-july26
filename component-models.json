@@ -478,16 +478,17 @@
       {
         "component": "aem-content",
         "name": "navItemLink",
-        "label": "Link",
-        "required": true
+        "label": "Navigation Link",
+        "required": true,
+        "description": "Select or create a link (e.g., internal page or external URL) - this is the authorable link node"
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "navItemLabel",
-        "label": "Label Text",
+        "label": "Navigation Text",
         "required": true,
-        "description": "Display text for the navigation item"
+        "description": "Enter the display text for this navigation item - this is the authorable text node"
       }
     ]
   },
