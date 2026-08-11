@@ -1,3 +1,6 @@
+main > .section.custom-block-container{
+    margin-top: 60px;
+}
 .custom-block{
     display: flex;  
     gap: 50px;
