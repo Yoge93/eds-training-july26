@@ -1,0 +1,314 @@
+
+/* 1. Section-level wrapper */
+.section.carousel-container .carousel-wrapper {
+  width: 100%;
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* 2. Block-scoped variables */
+.carousel.block {
+  --carousel-transition: 0.5s ease-in-out;
+  --carousel-gap: 0;
+  --carousel-padding: 1rem;
+  --carousel-radius: 0;
+  --carousel-nav-size: 48px;
+  --carousel-nav-color: var(--color-neutral-1);
+  --carousel-nav-color-hover: var(--color-primary-1);
+  --carousel-dot-size: 12px;
+  --carousel-dot-color: rgba(0, 0, 0, 0.3);
+  --carousel-dot-color-active: var(--color-primary-1);
+  --carousel-overlay: rgba(0, 0, 0, 0.4);
+  --carousel-text-color: var(--color-neutral-1);
+  --carousel-bg: transparent;
+}
+
+/* 3. Block root */
+.carousel.block {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--carousel-bg);
+  border-radius: var(--carousel-radius);
+}
+
+/* Dark variant */
+.carousel.block.dark {
+  --carousel-nav-color: var(--color-neutral-1);
+  --carousel-nav-color-hover: var(--color-primary-1);
+  --carousel-dot-color: rgba(255, 255, 255, 0.5);
+  --carousel-dot-color-active: var(--color-primary-1);
+  --carousel-overlay: rgba(0, 0, 0, 0.6);
+  --carousel-text-color: var(--color-neutral-1);
+}
+
+/* Light variant */
+.carousel.block.light {
+  --carousel-nav-color: var(--color-neutral-5);
+  --carousel-nav-color-hover: var(--color-primary-1);
+  --carousel-dot-color: rgba(0, 0, 0, 0.3);
+  --carousel-dot-color-active: var(--color-primary-1);
+  --carousel-overlay: rgba(255, 255, 255, 0.4);
+  --carousel-text-color: var(--color-neutral-5);
+}
+
+/* Full width variant */
+.carousel.block.full-width {
+  --carousel-radius: 0;
+  --carousel-padding: 0;
+}
+
+.carousel.block.full-width .carousel-wrapper {
+  padding: 0;
+  max-width: none;
+}
+
+/* 4. JS-added semantic wrappers */
+.carousel.block .carousel-wrapper {
+  position: relative;
+  width: 100%;
+  padding: var(--carousel-padding);
+}
+
+.carousel.block .carousel-track {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel.block .carousel-slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: var(--carousel-gap);
+}
+
+/* 5. Slide elements */
+.carousel.block .carousel-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform var(--carousel-transition);
+  outline: none;
+}
+
+.carousel.block .carousel-slide-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.carousel.block .carousel-slide-image picture,
+.carousel.block .carousel-slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel.block .carousel-slide-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  color: var(--carousel-text-color);
+  background: linear-gradient(to bottom, transparent 0%, var(--carousel-overlay) 100%);
+  margin-top: auto;
+}
+
+.carousel.block .carousel-slide-title {
+  margin: 0 0 1rem;
+  font-family: var(--font-family-heading);
+  font-size: var(--text-5xl);
+  line-height: var(--text-5xl-line-height);
+  font-weight: 700;
+  color: var(--carousel-text-color);
+}
+
+.carousel.block .carousel-slide-description {
+  font-size: var(--text-body);
+  line-height: var(--text-body-line-height);
+  margin: 0 0 1.5rem;
+  color: var(--carousel-text-color);
+}
+
+.carousel.block .carousel-slide-description p {
+  margin: 0;
+}
+
+.carousel.block .carousel-slide-link a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-primary-1);
+  color: var(--color-neutral-1);
+  text-decoration: none;
+  border-radius: var(--radius, 4px);
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.carousel.block .carousel-slide-link a:hover,
+.carousel.block .carousel-slide-link a:focus {
+  background-color: var(--color-primary-2);
+  color: var(--color-neutral-1);
+}
+
+/* Has link variant - adjust content positioning */
+.carousel.block .carousel-slide.has-link .carousel-slide-content {
+  background: linear-gradient(to bottom, transparent 0%, var(--carousel-overlay) 70%, var(--carousel-overlay) 100%);
+}
+
+/* Navigation */
+.carousel.block .carousel-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.carousel.block .carousel-nav-button {
+  pointer-events: auto;
+  width: var(--carousel-nav-size);
+  height: var(--carousel-nav-size);
+  border-radius: 50%;
+  background-color: var(--carousel-nav-color);
+  color: var(--carousel-bg);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+  margin: 0 1rem;
+  padding: 0;
+}
+
+.carousel.block .carousel-nav-button:hover,
+.carousel.block .carousel-nav-button:focus {
+  background-color: var(--carousel-nav-color-hover);
+  outline: none;
+}
+
+.carousel.block .carousel-nav-button:focus-visible {
+  outline: 2px solid var(--color-primary-1);
+  outline-offset: 2px;
+}
+
+.carousel.block .carousel-nav-button .icon {
+  font-size: 1.5rem;
+  color: inherit;
+}
+
+/* Dots */
+.carousel.block .carousel-dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.75rem;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.carousel.block .carousel-dot {
+  pointer-events: auto;
+  width: var(--carousel-dot-size);
+  height: var(--carousel-dot-size);
+  border-radius: 50%;
+  background-color: var(--carousel-dot-color);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.carousel.block .carousel-dot:hover {
+  transform: scale(1.2);
+}
+
+.carousel.block .carousel-dot.active {
+  background-color: var(--carousel-dot-color-active);
+  transform: scale(1.2);
+}
+
+.carousel.block .carousel-dot:focus-visible {
+  outline: 2px solid var(--color-primary-1);
+  outline-offset: 2px;
+}
+
+/* Full width adjustments */
+.carousel.block.full-width .carousel-slide-content {
+  padding: 4rem 2rem;
+}
+
+.carousel.block.full-width .carousel-slide-title {
+  font-size: var(--text-6xl);
+  line-height: var(--text-6xl-line-height);
+}
+
+.carousel.block.full-width .carousel-nav {
+  margin: 0 2rem;
+}
+
+/* 8. Responsive */
+@media (min-width: 600px) {
+  .carousel.block .carousel-slide-content {
+    padding: 3rem;
+  }
+
+  .carousel.block .carousel-nav {
+    margin: 0 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel.block .carousel-slide-content {
+    max-width: 600px;
+    padding: 4rem;
+  }
+
+  .carousel.block .carousel-slide-title {
+    font-size: var(--text-6xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel.block .carousel-slide-content {
+    max-width: 800px;
+  }
+}
+
+/* 9. Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .carousel.block .carousel-track,
+  .carousel.block .carousel-slide {
+    transition: none !important;
+  }
+
+  .carousel.block .carousel-nav-button,
+  .carousel.block .carousel-dot {
+    transition: none !important;
+  }
+}
+  
