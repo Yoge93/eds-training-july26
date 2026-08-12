@@ -137,6 +137,9 @@ export default async function decorate(block) {
     brandLink.closest('.button-container').className = '';
   }
 
+//   js for opening submenus
+
+
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
@@ -168,36 +171,21 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
+  const searchWrapper = document.querySelector('.nav-sections');
+  const inputWrapper = searchWrapper.querySelector('.default-content-wrapper p');
+
+  if (inputWrapper) {
+  const div = document.createElement('div');
+  div.innerHTML = inputWrapper.innerHTML;
+  inputWrapper.replaceWith(div);
+  div.classList.add('nav-search-wrapper');
+  const input = document.createElement('input');
+  div.append(input);
+  input.setAttribute('type', 'text');
+  input.setAttribute('placeholder', 'Search');
+  input.setAttribute('aria-label', 'Search');
+  input.classList.add('nav-search-input');
 }
-
-// export default async function decorate(block) {
-//    console.log('Header block is being decorated'); 
-//    const headerBg=document.createElement('div');
-//    headerBg.className='header-bg';
-//    block.prepend(headerBg);
-
-//    const logo = document.createElement('div');
-//    logo.className = 'logo';
-//    const logoImg = document.createElement('img');
-   
-//    logo.appendChild(logoImg);
-//    headerBg.appendChild(logo); 
-
-//    const navWrapper = document.createElement('nav');
-//     navWrapper.className = 'nav-wrapper';
-//     headerBg.appendChild(navWrapper);
-
-//     const navList = document.createElement('ul');
-//     navList.className = 'nav-list';
-//     navWrapper.appendChild(navList);
-//     const navItems = ['Home', 'About', 'Resources', 'Services', 'Contact', 'ContractorApp'];
-//     navItems.forEach(item => {
-//         const listItem = document.createElement('li');
-//         listItem.className = 'nav-item';
-//         listItem.textContent = item;
-//         navList.appendChild(listItem);
-//     });
-// }
-
-
-
+ 
+}

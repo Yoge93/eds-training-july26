@@ -1,37 +1,187 @@
-.hero-container .hero-wrapper {
-  max-width: unset;
+
+/* 1. Section-level wrapper */
+.section.hero-container .hero-wrapper {
   padding: 0;
+  max-width: none;
+  margin: 0;
 }
 
-.hero {
+/* 2. Block-scoped variables */
+.hero.block {
+  --hero-overlay-light: rgba(255, 255, 255, 0.8);
+  --hero-overlay-dark: rgba(0, 0, 0, 0.6);
+  --hero-text-light: var(--color-neutral-1, #ffffff);
+  --hero-text-dark: var(--color-neutral-5, #000000);
+  --hero-cta-bg: var(--color-primary-1, #0066cc);
+  --hero-cta-text: var(--color-neutral-1, #ffffff);
+}
+
+/* 3. Block root */
+.hero.block {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+  width: 100%;
+  overflow: hidden;
 }
 
-.hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
-}
-
-.hero picture {
+/* 4. Background image */
+.hero.block .hero-background {
   position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
-}
-
-.hero img {
-  object-fit: cover;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  z-index: -1;
+  object-fit: cover;
 }
 
-@media (width >= 900px) {
-  .hero {
-    padding: 40px 32px;
+.hero.block .hero-background picture,
+.hero.block .hero-background img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* 5. Content wrapper */
+.hero.block .hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: var(--max-content-width, 1320px);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* 6. Headline */
+.hero.block .hero-headline {
+  margin: 0;
+  font-family: var(--font-family-heading, system-ui, -apple-system, sans-serif);
+  font-size: var(--text-5xl, clamp(2rem, 4vw, 2.5rem));
+  font-weight: 700;
+  line-height: var(--text-5xl-line-height, 1.1);
+  color: var(--hero-text-light);
+  text-align: left;
+  align-self: flex-start;
+}
+
+/* 7. CTA Button */
+.hero.block .hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--button-padding-block, 0.75rem) var(--button-padding-inline, 1.5rem);
+  background-color: var(--hero-cta-bg);
+  color: var(--hero-cta-text);
+  font-family: var(--font-family-body, system-ui, -apple-system, sans-serif);
+  font-size: var(--text-button, 1rem);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius, 4px);
+  border: none;
+  cursor: pointer;
+  transition: background-color 200ms ease, transform 200ms ease;
+  align-self: flex-start;
+}
+
+.hero.block .hero-cta:hover,
+.hero.block .hero-cta:focus {
+  background-color: var(--color-primary-2, #0052a3);
+  transform: translateY(-2px);
+}
+
+.hero.block .hero-cta:active {
+  transform: translateY(0);
+}
+
+/* 8. Variant classes */
+.hero.block.light-overlay .hero-content {
+  background-color: var(--hero-overlay-light);
+  color: var(--hero-text-dark);
+}
+
+.hero.block.light-overlay .hero-headline {
+  color: var(--hero-text-dark);
+}
+
+.hero.block.light-overlay .hero-cta {
+  background-color: var(--color-primary-1, #0066cc);
+  color: var(--hero-cta-text);
+}
+
+.hero.block.dark-overlay .hero-content {
+  background-color: var(--hero-overlay-dark);
+  color: var(--hero-text-light);
+}
+
+.hero.block.dark-overlay .hero-headline {
+  color: var(--hero-text-light);
+}
+
+.hero.block.dark-overlay .hero-cta {
+  background-color: var(--color-primary-1, #0066cc);
+  color: var(--hero-cta-text);
+}
+
+/* 9. Responsive */
+@media (min-width: 600px) {
+  .hero.block {
+    min-height: 500px;
+  }
+
+  .hero.block .hero-content {
+    padding: 3rem;
   }
 }
+
+@media (min-width: 768px) {
+  .hero.block {
+    flex-direction: row;
+    align-items: center;
+    min-height: 600px;
+  }
+
+  .hero.block .hero-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 100%;
+    padding: 4rem;
+  }
+
+  .hero.block .hero-headline {
+    flex: 1;
+    text-align: left;
+    margin: 0;
+  }
+
+  .hero.block .hero-cta {
+    align-self: flex-end;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero.block {
+    min-height: 700px;
+  }
+
+  .hero.block .hero-content {
+    padding: 5rem;
+  }
+}
+
+/* 10. Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero.block .hero-cta {
+    transition: none;
+  }
+}
+  
