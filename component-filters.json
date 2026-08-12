@@ -18,7 +18,6 @@
       "fragment",
       "bio-cards",
       "custom-block",
-      "carousel-block",
       "carousel"
     ]
   },
@@ -32,12 +31,6 @@
     "id": "cards",
     "components": [
       "card"
-    ]
-  },
-  {
-    "id": "carousel-block",
-    "components": [
-      "carousel-item"
     ]
   },
   {
