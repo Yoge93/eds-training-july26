@@ -1,12 +1,11 @@
-
-/* 1. Section-level wrapper */
+/* 
 .section.hero-container .hero-wrapper {
   padding: 0;
   max-width: none;
   margin: 0;
 }
 
-/* 2. Block-scoped variables */
+
 .hero.block {
   --hero-overlay-light: rgba(255, 255, 255, 0.8);
   --hero-overlay-dark: rgba(0, 0, 0, 0.6);
@@ -16,7 +15,6 @@
   --hero-cta-text: var(--color-neutral-1, #ffffff);
 }
 
-/* 3. Block root */
 .hero.block {
   position: relative;
   display: flex;
@@ -26,7 +24,6 @@
   overflow: hidden;
 }
 
-/* 4. Background image */
 .hero.block .hero-background {
   position: absolute;
   top: 0;
@@ -44,7 +41,7 @@
   display: block;
 }
 
-/* 5. Content wrapper */
+
 .hero.block .hero-content {
   display: flex;
   flex-direction: column;
@@ -59,7 +56,6 @@
   z-index: 1;
 }
 
-/* 6. Headline */
 .hero.block .hero-headline {
   margin: 0;
   font-family: var(--font-family-heading, system-ui, -apple-system, sans-serif);
@@ -71,7 +67,7 @@
   align-self: flex-start;
 }
 
-/* 7. CTA Button */
+
 .hero.block .hero-cta {
   display: inline-flex;
   align-items: center;
@@ -100,7 +96,7 @@
   transform: translateY(0);
 }
 
-/* 8. Variant classes */
+
 .hero.block.light-overlay .hero-content {
   background-color: var(--hero-overlay-light);
   color: var(--hero-text-dark);
@@ -129,7 +125,7 @@
   color: var(--hero-cta-text);
 }
 
-/* 9. Responsive */
+
 @media (min-width: 600px) {
   .hero.block {
     min-height: 500px;
@@ -178,10 +174,57 @@
   }
 }
 
-/* 10. Reduced motion */
+
 @media (prefers-reduced-motion: reduce) {
   .hero.block .hero-cta {
     transition: none;
   }
 }
-  
+   */
+
+   /* =========================
+   HERO - MOBILE FIRST
+   ========================= */
+
+main .section.hero-container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-container .hero-wrapper {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-container .hero.block {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-container .hero.block > div {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-container .hero.block picture {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-container .hero.block img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}

@@ -187,5 +187,14 @@ export default async function decorate(block) {
   input.setAttribute('aria-label', 'Search');
   input.classList.add('nav-search-input');
 }
- 
+
+const logoWrapper = block.querySelector('.nav-sections .default-content-wrapper > p:nth-of-type(1)');
+if (logoWrapper) {
+  logoWrapper.classList.add('logo-wrapper');
+}
+
+const advisoryWrapper = block.querySelector('.nav-sections .default-content-wrapper > ul:nth-of-type(2)');
+if(advisoryWrapper){
+  advisoryWrapper.classList.add('advisory-wrapper');
+}
 }
