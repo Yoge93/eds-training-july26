@@ -205,13 +205,18 @@
         "component": "richtext",
         "name": "col1_content",
         "label": "Main Body Content",
-        "valueType": "string",
-        "filter": "accordion-item"
+        "valueType": "string"
       },
       {
         "component": "text",
         "name": "col1_button",
         "label": "Button"
+      },
+      {
+        "component": "aem-content",
+        "name": "col1_link",
+        "label": "Link",
+        "valueType": "string"
       }
     ]
   },
