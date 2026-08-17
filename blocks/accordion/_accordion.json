@@ -69,6 +69,11 @@
               ]
             }
           ]
+        },
+        {
+          "component": "text",
+          "name": "col1_accordionTitle",
+          "label": "Accordion Title"
         }
       ]
     },
@@ -78,7 +83,7 @@
         {
           "component": "text",
           "name": "col1_title",
-          "label": "Accordion Title"
+          "label": "Accordion Item Title"
         },
         {
           "component": "text",
@@ -88,10 +93,15 @@
         },
         {
           "component": "richtext",
-          "name": "col1_description",
-          "label": "Description",
+          "name": "col1_content",
+          "label": "Main Body Content",
           "valueType": "string",
           "required": true
+        },
+        {
+          "component": "text",
+          "name": "col1_knowMore",
+          "label": "Know More"
         }
       ]
     }
