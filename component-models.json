@@ -214,9 +214,10 @@
         "required": true
       },
       {
-        "component": "text",
+        "component": "aem-content",
         "name": "col1_knowMore",
-        "label": "Know More"
+        "label": "Know More",
+        "valueType": "string"
       }
     ]
   },
