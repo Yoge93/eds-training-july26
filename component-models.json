@@ -153,6 +153,44 @@
     "id": "accordion",
     "fields": [
       {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Accordion Type",
+        "options": [
+          {
+            "name": "Accordion Behavior",
+            "children": [
+              {
+                "name": "First Open",
+                "value": "first-open"
+              },
+              {
+                "name": "Single",
+                "value": "single"
+              },
+              {
+                "name": "Multiple",
+                "value": "multiple"
+              }
+            ]
+          },
+          {
+            "name": "SEO & Schema",
+            "children": [
+              {
+                "name": "Enable FAQ Schema",
+                "value": "seo-schema-enable"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "fields": [
+      {
         "component": "text",
         "name": "title",
         "label": "Accordion Title"
@@ -162,6 +200,23 @@
         "name": "titleType",
         "label": "Accordion Title Type",
         "value": "h3"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Description",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "button",
+        "label": "Button"
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link",
+        "valueType": "string"
       }
     ]
   },
