@@ -21,46 +21,13 @@
       "id": "accordion",
       "fields": [
         {
-          "component": "multiselect",
-          "name": "classes",
-          "label": "Accordion Type",
-          "options": [
-            {
-              "name": "Accordion Behavior",
-              "children": [
-                {
-                  "name": "First Open",
-                  "value": "first-open"
-                },
-                {
-                  "name": "Single",
-                  "value": "single"
-                },
-                {
-                  "name": "Multiple",
-                  "value": "multiple"
-                }
-              ]
-            },
-            {
-              "name": "SEO & Schema",
-              "children": [
-                {
-                  "name": "Enable FAQ Schema",
-                  "value": "seo-schema-enable"
-                }
-              ]
-            }
-          ]
-        },
-        {
           "component": "text",
-          "name": "col1_title",
+          "name": "title",
           "label": "Accordion Title"
         },
         {
           "component": "text",
-          "name": "col1_titleType",
+          "name": "titleType",
           "label": "Accordion Title Type",
           "value": "h3"
         }
