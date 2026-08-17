@@ -22,6 +22,37 @@
     ]
   },
   {
+    "id": "accordion",
+    "rte": {
+      "toolbar": {
+        "blocks": [
+          "paragraph",
+          "h3"
+        ],
+        "insert": [
+          "table",
+          "link",
+          "unlink"
+        ]
+      },
+      "actions": {
+        "table": {
+          "label": "Insert Table",
+          "wrapInParagraphs": true
+        },
+        "link": {
+          "label": "Insert Link",
+          "shortcut": "Mod-K",
+          "hideTarget": false
+        },
+        "unlink": {
+          "label": "Remove Link",
+          "shortcut": "Mod-Shift-K"
+        }
+      }
+    }
+  },
+  {
     "id": "bio-cards",
     "components": [
       "bio-card"

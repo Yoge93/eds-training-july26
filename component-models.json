@@ -150,6 +150,61 @@
     ]
   },
   {
+    "id": "accordion",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Accordion Type",
+        "options": [
+          {
+            "name": "Accordion Behavior",
+            "children": [
+              {
+                "name": "First Open",
+                "value": "first-open"
+              },
+              {
+                "name": "Single",
+                "value": "single"
+              },
+              {
+                "name": "Multiple",
+                "value": "multiple"
+              }
+            ]
+          },
+          {
+            "name": "SEO & Schema",
+            "children": [
+              {
+                "name": "Enable FAQ Schema",
+                "value": "seo-schema-enable"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "col1_title",
+        "label": "Accordion Title"
+      },
+      {
+        "component": "text",
+        "name": "col1_titleType",
+        "label": "Accordion Title Type",
+        "value": "h3"
+      },
+      {
+        "component": "richtext",
+        "name": "col1_content",
+        "label": "Main Body Content",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "bio-cards",
     "fields": [
       {

@@ -180,6 +180,23 @@ async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
+  decorateTextSection()
+}
+
+function decorateTextSection(){
+  const textSection = document.querySelectorAll('.para-styling');
+  textSection.forEach((section) => {
+    const heading = section.querySelector('h1');
+    if (heading) {
+      heading.classList.add('para-heading');
+    }
+    const paragraph = section.querySelector('p');
+    if (paragraph) {
+      paragraph.classList.add('para-paragraph');
+    }
+  });
 }
 
 loadPage();
+
+
