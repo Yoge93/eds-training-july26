@@ -184,7 +184,12 @@
             ]
           }
         ]
-      },
+      }
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "fields": [
       {
         "component": "text",
         "name": "col1_title",
