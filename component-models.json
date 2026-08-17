@@ -215,9 +215,14 @@
       },
       {
         "component": "aem-content",
-        "name": "col1_knowMore",
-        "label": "Know More",
+        "name": "col1_addLink",
+        "label": "Add Link",
         "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col1_addLinkText",
+        "label": "Add Link Text"
       }
     ]
   },
