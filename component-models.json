@@ -206,6 +206,11 @@
         "name": "col1_content",
         "label": "Main Body Content",
         "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col1_button",
+        "label": "Button"
       }
     ]
   },
