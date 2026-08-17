@@ -184,12 +184,7 @@
             ]
           }
         ]
-      }
-    ]
-  },
-  {
-    "id": "accordion-item",
-    "fields": [
+      },
       {
         "component": "text",
         "name": "col1_title",
@@ -200,23 +195,6 @@
         "name": "col1_titleType",
         "label": "Accordion Title Type",
         "value": "h3"
-      },
-      {
-        "component": "richtext",
-        "name": "col1_content",
-        "label": "Main Body Content",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "col1_button",
-        "label": "Button"
-      },
-      {
-        "component": "aem-content",
-        "name": "col1_link",
-        "label": "Link",
-        "valueType": "string"
       }
     ]
   },

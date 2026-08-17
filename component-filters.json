@@ -24,12 +24,6 @@
   },
   {
     "id": "accordion",
-    "components": [
-      "accordion-item"
-    ]
-  },
-  {
-    "id": "accordion-item",
     "rte": {
       "toolbar": {
         "blocks": [
