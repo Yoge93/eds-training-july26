@@ -77,18 +77,18 @@
       "fields": [
         {
           "component": "text",
-          "name": "title",
+          "name": "col1_title",
           "label": "Accordion Title"
         },
         {
           "component": "text",
-          "name": "titleType",
+          "name": "col1_titleType",
           "label": "Accordion Title Type",
           "value": "h3"
         },
         {
           "component": "richtext",
-          "name": "description",
+          "name": "col1_description",
           "label": "Description",
           "valueType": "string",
           "required": true
