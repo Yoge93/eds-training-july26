@@ -37,7 +37,12 @@
             {
               "name": "our-team",
               "value": "our-team"
-            }
+            },
+            {
+            "name": "para-styling",
+            "value": "para-styling"
+          }
+
           ]
         }
       ]

@@ -197,4 +197,18 @@ const advisoryWrapper = block.querySelector('.nav-sections .default-content-wrap
 if(advisoryWrapper){
   advisoryWrapper.classList.add('advisory-wrapper');
 }
+const hero = document.querySelector('.hero-container');
+if (hero && navWrapper) {
+  const handleScroll = () => {
+    const heroBottom = hero.getBoundingClientRect().bottom;
+    const headerHeight = navWrapper.offsetHeight;
+    if (heroBottom <= headerHeight + 20) {
+      navWrapper.classList.add('header-scrolled');
+    } else {
+      navWrapper.classList.remove('header-scrolled');
+    }
+  };
+  window.addEventListener('scroll', handleScroll);
+  handleScroll();
+}
 }

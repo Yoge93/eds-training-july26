@@ -224,7 +224,7 @@ main .section.hero-container {
   display: block;
   width: 100%;
   max-width: none;
-  height: auto;
+  max-height: 330px;
   margin: 0;
   padding: 0;
 }

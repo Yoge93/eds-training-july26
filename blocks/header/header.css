@@ -9,8 +9,18 @@ header .nav-wrapper {
   z-index: 2;
   position: fixed;
   padding: 20px 0px;
-  background-color: #000;
+  background-color: transparent;
   letter-spacing: .8px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: transparent;
+  transition: background-color 0.3s ease;
+}
+
+header .nav-wrapper.header-scrolled {
+  background-color: #000;
 }
 
 header nav {
@@ -190,6 +200,15 @@ header nav .nav-sections ul>li>ul>li {
   font-weight: 400;
 }
 
+header nav .nav-sections .default-content-wrapper .nav-search-wrapper .icon {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  top: 40px;
+  left: 352px;
+}
+
 @media (width >=900px) {
   header nav .nav-sections {
     display: block;
@@ -347,7 +366,7 @@ header nav .search-button:hover {
   outline: none;
   border: none;
   border-radius: 50px;
-  padding: 8px 20px;
+  padding: 10px;
   background: transparent;
   width: 143px;
 }
@@ -430,4 +449,32 @@ header nav .search-button:hover {
   letter-spacing: normal;
   font-weight: 600;
   padding-bottom: 0;
+}
+
+.header-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.header-wrapper.header-scrolled {
+  background-color: #000;
+}
+
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  header nav{
+    gap: 0px 40px;
+  }
+   .default-content-wrapper .nav-search-wrapper .nav-search-input{
+    display: none;
+  }
+  .default-content-wrapper .nav-search-wrapper{
+    background-color: transparent;
+    width: unset;
+  }
 }
