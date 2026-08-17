@@ -89,8 +89,7 @@
           "component": "richtext",
           "name": "col1_content",
           "label": "Main Body Content",
-          "valueType": "string",
-          "filter": "accordion-item"
+          "valueType": "string"
         }
       ]
     }
