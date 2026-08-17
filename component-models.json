@@ -216,8 +216,7 @@
       {
         "component": "aem-content",
         "name": "col1_addLink",
-        "label": "Add Link",
-        "valueType": "string"
+        "label": "Add Link"
       },
       {
         "component": "text",
