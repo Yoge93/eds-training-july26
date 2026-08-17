@@ -1,0 +1,7 @@
+.accordion-content {
+  display: none;
+}
+
+.accordion-item.open .accordion-content {
+  display: block;
+}
