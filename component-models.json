@@ -205,7 +205,8 @@
         "component": "richtext",
         "name": "col1_content",
         "label": "Main Body Content",
-        "valueType": "string"
+        "valueType": "string",
+        "filter": "accordion-item"
       }
     ]
   },
