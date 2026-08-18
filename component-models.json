@@ -150,7 +150,7 @@
     ]
   },
   {
-    "id": "accordion",
+    "id": "accordion-copy",
     "fields": [
       {
         "component": "multiselect",
@@ -163,14 +163,14 @@
           },
           {
             "name": "Nippon Accordion",
-            "value": "nippon-accordion"
+            "value": "nippon-accordion-copy"
           }
         ]
       }
     ]
   },
   {
-    "id": "accordion-item",
+    "id": "accordion-copy-item",
     "fields": [
       {
         "component": "richtext",
@@ -202,7 +202,7 @@
     ]
   },
   {
-    "id": "accordion-item-2",
+    "id": "accordion-copy-item-2",
     "fields": [
       {
         "component": "richtext",

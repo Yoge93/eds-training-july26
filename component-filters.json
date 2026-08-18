@@ -24,10 +24,10 @@
     ]
   },
   {
-    "id": "accordion",
+    "id": "accordion-copy",
     "components": [
-      "accordion-item",
-      "accordion-item-2"
+      "accordion-copy-item",
+      "accordion-copy-item-2"
     ]
   },
   {
