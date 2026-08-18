@@ -58,22 +58,8 @@
                   "value": "multiple"
                 }
               ]
-            },
-            {
-              "name": "SEO & Schema",
-              "children": [
-                {
-                  "name": "Enable FAQ Schema",
-                  "value": "seo-schema-enable"
-                }
-              ]
             }
           ]
-        },
-        {
-          "component": "text",
-          "name": "col1_accordionTitle",
-          "label": "Accordion Title"
         }
       ]
     },
@@ -82,32 +68,62 @@
       "fields": [
         {
           "component": "text",
-          "name": "col1_title",
-          "label": "Accordion Item Title"
-        },
-        {
-          "component": "text",
-          "name": "col1_titleType",
-          "label": "Accordion Title Type",
-          "value": "h3"
-        },
-        {
-          "component": "richtext",
-          "name": "col1_content",
-          "label": "Main Body Content",
-          "valueType": "string",
-          "required": true
-        },
-        {
-          "component": "aem-content",
-          "name": "col1_addLink",
-          "label": "Add Link",
+          "name": "title",
+          "label": "Accordion Title",
           "valueType": "string"
         },
         {
-          "component": "text",
-          "name": "col1_addLinkText",
-          "label": "Add Link Text"
+          "component": "select",
+          "name": "titleType",
+          "label": "Accordion Title Type",
+          "valueType": "string",
+          "value": "h3",
+          "options": [
+            {
+              "name": "H1",
+              "value": "h1"
+            },
+            {
+              "name": "H2",
+              "value": "h2"
+            },
+            {
+              "name": "H3",
+              "value": "h3"
+            },
+            {
+              "name": "H4",
+              "value": "h4"
+            },
+            {
+              "name": "H5",
+              "value": "h5"
+            },
+            {
+              "name": "H6",
+              "value": "h6"
+            }
+          ]
+        },
+        {
+          "component": "richtext",
+          "name": "content",
+          "label": "Main Body Content",
+          "valueType": "string"
+        },
+        {
+          "component": "container",
+          "name": "notes",
+          "label": "Notes",
+          "multi": false,
+          "fields": [
+            {
+              "component": "richtext",
+              "name": "noteBody",
+              "label": "Note Body",
+              "valueType": "string"
+            }
+          ]
         }
       ]
     }
