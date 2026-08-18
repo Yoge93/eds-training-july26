@@ -237,6 +237,18 @@
             "name": "noteBody",
             "label": "Note Body",
             "valueType": "string"
+          },
+          {
+            "component": "richtext",
+            "name": "qwerty",
+            "label": "Note Body",
+            "valueType": "string"
+          },
+          {
+            "component": "richtext",
+            "name": "samething",
+            "label": "Note Body",
+            "valueType": "string"
           }
         ]
       }
