@@ -63,7 +63,8 @@
         "bio-cards",
         "custom-block",
         "carousel",
-        "accordion"
+        "accordion",
+        "accordion-copy"
       ]
     }
   ]

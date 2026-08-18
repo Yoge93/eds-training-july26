@@ -155,6 +155,90 @@
       {
         "component": "multiselect",
         "name": "classes",
+        "label": "Classes",
+        "options": [
+          {
+            "name": "Common",
+            "value": "common"
+          },
+          {
+            "name": "Nippon Accordion",
+            "value": "nippon-accordion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "col1_question",
+        "label": "Question"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col2_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "col2_answer",
+        "label": "Answer",
+        "raw": true
+      }
+    ]
+  },
+  {
+    "id": "accordion-item-2",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "col1_question",
+        "label": "Question"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "col2_answer",
+        "label": "Answer",
+        "raw": true
+      }
+    ]
+  },
+  {
+    "id": "accordion",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
         "label": "Accordion Type",
         "options": [
           {

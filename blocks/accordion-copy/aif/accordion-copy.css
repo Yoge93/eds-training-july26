@@ -1,0 +1,1751 @@
+﻿.section .accordion .accordion-item {
+    border: 1px solid #dadada;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.section .accordion .accordion-item + .accordion-item {
+    margin-top: 24px;
+}
+
+.section .accordion .accordion-item p {
+    margin-bottom: 0.8em;
+}
+
+.section .accordion .accordion-item .accordion-item-label {
+    position: relative;
+    padding: 0 16px;
+    padding-right: 46px;
+    cursor: pointer;
+    list-style: none;
+    overflow: auto;
+    transition: background-color 0.2s;
+}
+
+.section .accordion .accordion-item[open] .accordion-item-label {
+    background-color: var(--light-color);
+}
+
+.section .accordion .accordion-item .accordion-item-label:focus,
+.section .accordion .accordion-item .accordion-item-label:hover {
+    background-color: var(--light-color);
+}
+
+.section
+    .accordion
+    .accordion-item
+    .accordion-item-label::-webkit-.accordion-item-marker {
+    display: none;
+}
+
+/* .accordion .accordion-item .accordion-item-label::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%) rotate(135deg);
+  width: 6px;
+  height: 6px;
+  border: 2px solid;
+  border-width: 2px 2px 0 0;
+  transition: transform 0.2s;
+} */
+
+/* .accordion .accordion-item[open] .accordion-item-label::after {
+  transform: translateY(-50%) rotate(-45deg);
+} */
+
+.section .accordion .accordion-item .accordion-item-body {
+    padding: 0 16px;
+}
+
+.section .accordion .accordion-item[open] .accordion-item-body {
+    border-top: 1px solid #dadada;
+    background-color: var(--background-color);
+}
+
+/* aif Accordion Css Start */
+
+.section.aif-about-accordion {
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding: 48px 0;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.section .accordion-body-inactive {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.section.aif-about-accordion .default-content-wrapper {
+    max-width: 1280px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+.section.aif-about-accordion .default-content-wrapper h2{
+        font-size: 32px;
+        color: #E03028;
+}
+
+.section.aif-about-accordion .default-content-wrapper p{
+    font-size: 48px;
+    max-width: 989.675px;
+}
+
+.section.aif-about-accordion .default-content-wrapper .section-p {
+    margin: 0;
+    color: #e03028;
+    font-size: 32px;
+    font-weight: 500;
+    font-family: var(--ff-medium);
+    line-height: 48px;
+
+    /* font-family: 'Geist'; */
+}
+
+.section.aif-about-accordion .default-content-wrapper .section-h2 {
+    margin: 0;
+    font-size: 48px;
+    line-height: 72px;
+    font-weight: 300;
+    color: #000;
+
+    /* font-family: 'Geist'; */
+}
+
+.section.aif-about-accordion .accordion-wrapper .section-h2 {
+    font-size: 24px;
+    line-height: 41px;
+    font-weight: 400;
+    padding-right: 39px;
+}
+
+.section.aif-about-accordion .accordion-wrapper {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.section.aif-about-accordion.real-accordion-two .accordion-wrapper {
+    padding: 0 40px;
+}
+
+.section.aif-about-accordion.section.real-estate-accordion .accordion-wrapper {
+    padding: 0 40px;
+}
+
+.section.aif-about-accordion .accordion-wrapper .accordion .accordion-item {
+    margin: 0;
+}
+
+.section.aif-about-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px 8px 24px 24px;
+    background-color: #f5f5f5;
+    list-style: none;
+    overflow: hidden;
+}
+
+.section.aif-about-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-label::-webkit-details-marker {
+    display: none;
+}
+
+.section.aif-about-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-label
+    .accordion-h3 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 400;
+    font-family: var(--ff-regular);
+    letter-spacing: -0.01em;
+    color: #000;
+    line-height: 39px;
+}
+
+.section.aif-about-accordion.real-estate-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-label
+    .accordion-h3 {
+    font-size: 32px;
+    line-height: 48px;
+    color: rgb(127 127 127);
+}
+
+.section.aif-about-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-label
+    .accordion-p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    color: #6d6d6d;
+
+    /* font-family: 'Geist'; */
+}
+
+.section.aif-about-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-body
+    .accordion-ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.section.aif-about-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-label
+    .accordion-ul {
+    width: 14.29px;
+    height: 14.29px;
+    position: absolute;
+    top: 22%;
+    right: 23px;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.section.aif-about-accordion.real-estate-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-label
+    .accordion-ul {
+    top: 40%;
+}
+
+.section.aif-about-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-label
+    .accordion-ul
+    .icon0 {
+    display: none;
+}
+
+.section.aif-about-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-body
+    img {
+    min-width: 319px;
+    height: 439px;
+
+    /* object-fit: cover; */
+}
+
+.section.real-estate-accordion.aif-about-accordion.accordion-container {
+    padding: 0;
+    margin: 0 0 40px;
+}
+
+.section.aif-about-accordion.real-estate-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-body
+    img {
+    max-width: 600px;
+    max-height: 308px;
+    border-radius: 10px;
+}
+
+.section.aif-about-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-label
+    .accordion-ul
+    .accordion-li
+    .section-span
+    img {
+    width: 19px;
+    height: 19px;
+    max-width: unset;
+}
+
+.section.aif-about-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item[open] {
+    transition: transform 1ms;
+}
+
+.section.aif-about-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-body {
+    display: flex;
+    gap: 128px;
+    background-color: #f5f5f5;
+    border-top: none;
+}
+
+.section.aif-about-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-body
+    img.accordion-img {
+    min-width: 369px;
+    height: 439px;
+    object-fit: cover;
+}
+
+.section.aif-about-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-body
+    p {
+    margin: 0;
+}
+
+.section.aif-about-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-body
+    .accordion-ul
+    .accordion-li {
+    margin: 0;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.section.equity-accordion {
+    display: none;
+}
+
+@media screen and (width <=1024px) {
+    .section.aif-about-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item[open]
+        .accordion-item-body {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 24px;
+        background-color: #fff;
+    }
+
+    .section.equity-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item[open]
+        .accordion-item-body {
+        background-color: rgb(245 245 245);
+        margin-top: 24px;
+        gap: 0;
+        padding: 0 16px;
+    }
+
+    .section.aif-about-accordion.aif-about-white-background
+        .accordion-wrapper
+        .accordion
+        .accordion-item[open]
+        .accordion-item-body {
+        background-color: #f5f5f5;
+    }
+
+    .section.aif-about-accordion .default-content-wrapper .section-p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .section.aif-about-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-body
+        .accordion-ul
+        .accordion-li {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .section.aif-about-accordion .default-content-wrapper .section-h2 {
+        margin: 0;
+        font-size: 28px;
+        line-height: 42px;
+    }
+
+    .section.aif-about-accordion .default-content-wrapper p{
+        font-size: 38px;
+    }
+
+    .section.aif-about-accordion .default-content-wrapper h2{
+        font-size:16px
+    }
+
+    .section.aif-about-accordion {
+        gap: 24px;
+        padding: 16px;
+    }
+
+    .section.aif-about-accordion .accordion-wrapper {
+        padding: 0;
+    }
+
+    .section.aif-about-accordion.section.real-estate-accordion
+        .accordion-wrapper {
+        padding: 0;
+    }
+
+    .section.aif-about-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-body
+        img.accordion-img {
+        object-fit: contain;
+        min-width: unset;
+        width: 100%;
+        height: 100%;
+        max-width: 369px;
+        min-height: 439px;
+
+    }
+
+    .section.aif-about-accordion .accordion-wrapper .accordion .accordion-item .accordion-item-body .aif-about-accordion-p.accordion-p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+    .section.aif-about-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-label
+        .accordion-h3 {
+        font-size: 19px;
+        margin: 8px 0;
+    }
+
+    .section.aif-about-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-label
+        .accordion-p {
+        font-size: 16px;
+    }
+
+    .section.aif-about-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-label::after {
+        top: 27%;
+    }
+
+    .section.aif-about-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-label {
+        background-color: #fff;
+    }
+
+    .section.aif-about-accordion .accordion-wrapper .accordion {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .section.equity-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-body
+        .section-p
+        img {
+        width: 100%;
+        height: 378px;
+        max-width: unset;
+        object-fit: cover;
+    }
+
+    .section.equity-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-body
+        .accordion-ul {
+        gap: 0;
+    }
+
+    /* stylelint-disable-next-line no-descending-specificity */
+    .section.equity-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-body {
+        padding: 0;
+        background: rgb(245 245 245);
+        margin-top: 16px;
+    }
+
+    .section.equity-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-body
+        p:nth-of-type(2) {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        font-family: var(--ff-regular);
+        padding: 0 32px;
+        color: rgb(85 85 85);
+        text-align: center;
+    }
+
+    .section.equity-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-body
+        p:nth-of-type(2)
+        strong {
+        color: rgb(224 48 40);
+        margin-left: 5px;
+        font-weight: 600;
+        font-family: var(--ff-semibold);
+    }
+
+    .section.equity-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-body
+        p:nth-of-type(3) {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 8px 32px;
+        font-weight: 400;
+        font-family: var(--ff-regular);
+        color: rgb(109 109 109);
+        text-align: center;
+    }
+
+    .section.equity-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-body
+        ol
+        li {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        font-family: var(--ff-regular);
+        color: rgb(109 109 109);
+        padding: 0 32px;
+        text-align: center;
+    }
+
+    .section.equity-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-body
+        p:nth-of-type(4) {
+        font-size: 18px;
+        line-height: 27px;
+        color: rgb(0 0 0);
+        font-weight: 400;
+        font-family: var(--ff-regular);
+        padding: 8px 32px;
+        text-align: center;
+    }
+
+    .section.equity-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-body
+        > .accordion-ul {
+        padding: 0 16px;
+    }
+
+    .section.equity-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-body
+        .accordion-ul
+        .accordion-li {
+        display: flex;
+        align-items: flex-start;
+        font-size: 16px;
+        line-height: 24px;
+        color: rgb(109 109 109);
+        font-weight: 400;
+        font-family: var(--ff-regular);
+        text-align: center;
+        padding-bottom: 4px;
+    }
+
+    .section.equity-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-body
+        ul
+        li
+        span {
+        margin-right: 8px;
+    }
+
+    .section.equity-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-body
+        ul
+        li
+        span
+        img.accordion-img {
+        width: 12px;
+        height: 12px;
+        max-width: unset;
+    }
+
+    .section.equity-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-body
+        p:nth-of-type(1) {
+        margin: 0 -24px;
+    }
+
+    .section.equity-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-label
+        .accordion-ul {
+        top: 33%;
+    }
+
+    .section.equity-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-label
+        .accordion-p {
+        font-size: 19px;
+        line-height: 33px;
+        color: rgb(74 74 74 / 50%);
+        font-weight: 400;
+        font-family: var(--ff-regular);
+        width: 87%;
+    }
+
+    .section.equity-accordion .accordion .accordion-item {
+        border: none;
+        border-top: 1px solid rgb(74 74 74 / 50%);
+    }
+
+    .section.equity-accordion .accordion-wrapper .accordion {
+        gap: 20px;
+    }
+
+    .section.equity-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-label {
+        padding: 11px 0 0;
+        background: none;
+    }
+
+    .section.equity-accordion {
+        background: none;
+        display: block;
+    }
+
+    .section.equity-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item[open]
+        .accordion-item-label
+        .accordion-p {
+        color: rgb(224 48 40);
+    }
+
+    .section.equity-accordion .accordion .accordion-item[open] {
+        border-top: 1px solid rgb(224 48 40);
+    }
+
+    .section.real-estate-accordion.aif-about-accordion.aif-about-white-background
+        .accordion-wrapper
+        .accordion
+        .accordion-item[open]
+        .accordion-item-body {
+        background-color: unset;
+    }
+
+    .section.real-estate-accordion.aif-about-accordion.accordion-container {
+        padding: 16px;
+        margin: 0;
+    }
+
+    .section.real-estate-accordion.aif-about-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-label
+        .accordion-ul
+        .accordion-li
+        .section-span
+        img {
+        width: 14px;
+        height: 14px;
+    }
+
+    .section.aif-about-accordion.real-estate-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-label
+        .accordion-ul {
+        top: 25%;
+    }
+}
+
+/* accordion with white background Start */
+
+.section.real-estate-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-label {
+    border-bottom: 1px solid #ddd;
+
+    /* margin-bottom: 16px; */
+    padding: 24px 0;
+}
+
+.section.real-estate-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item[open]
+    .accordion-item-label {
+    border-bottom: 1px solid red;
+}
+
+.section.aif-about-accordion.aif-about-white-background {
+    background-color: #fff;
+    padding: 24px 0;
+    margin-block: 32px;
+}
+
+.section.aif-about-accordion.aif-about-white-background
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-label {
+    background-color: #f5f5f5;
+}
+
+.section.aif-about-accordion.aif-about-white-background
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-body
+    .accordion-li
+    .section-p {
+    font-weight: 600;
+    font-family: var(--ff-semibold);
+}
+
+.section.aif-about-accordion.aif-about-white-background
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-body
+    > .section-ul {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+@media screen and (width <=1024px) {
+    .section.aif-about-accordion.aif-about-white-background {
+        padding: 16px;
+    }
+}
+
+.section.real-estate-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-body {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-top: 16px;
+}
+
+.section.aif-about-accordion.aif-about-white-background.real-estate-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-label {
+    background-color: white;
+}
+
+.section.aif-about-accordion.real-estate-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-body {
+    background-color: white;
+}
+
+.section.aif-about-accordion.real-estate-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-body
+    > .section-ul {
+    gap: 8px;
+}
+
+.section.aif-about-accordion.real-estate-accordion .accordion .accordion-item {
+    border: none;
+}
+
+.section.aif-about-accordion.real-estate-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item[open]
+    .accordion-item-label
+    .accordion-h3 {
+    color: rgb(237 28 36);
+}
+
+.section.aif-about-accordion.real-estate-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-body
+    .accordion-ul
+    .accordion-li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: var(--ff-regular);
+    color: rgb(34 34 34);
+}
+
+.section.aif-about-accordion.real-estate-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-body
+    .accordion-ul
+    .accordion-li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 11px;
+    height: 11px;
+    border: 2px solid #e60000;
+    border-radius: 50%;
+}
+
+.section.aif-about-accordion.real-estate-accordion
+    .accordion-wrapper
+    .accordion
+    .accordion-item
+    .accordion-item-body
+    .accordion-ul
+    .accordion-li::after {
+    content: '';
+    position: absolute;
+    left: 5.5px;
+    top: 11px;
+    width: 4px;
+    height: 4px;
+    background: #e60000;
+    border-radius: 50%;
+}
+
+@media screen and (width <=1024px) {
+    .section.aif-about-accordion.real-estate-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-body {
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    .section.aif-about-accordion.real-estate-accordion
+        .accordion-wrapper
+        .accordion {
+        gap: 0;
+    }
+
+    .section.aif-about-accordion.real-estate-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-label {
+        padding: 0;
+    }
+
+    .section.aif-about-accordion.real-estate-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-label
+        .accordion-h3 {
+        font-size: 16px;
+        line-height: unset;
+        font-weight: 400;
+        font-family: var(--ff-regular);
+    }
+
+    .section.real-estate-accordion.real-estate-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-label {
+        overflow: hidden;
+    }
+
+    .section.aif-about-accordion.real-estate-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-body
+        img {
+        height: auto;
+        max-width: unset;
+        object-fit: cover;
+    }
+}
+
+/* real-estate accordion End */
+
+/* real-estate accordion framework start */
+
+.section.aif-about-accordion.real-accordion-two
+    .default-content-wrapper
+    h2:nth-child(1) {
+    color: rgb(237 28 36);
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+    font-family: var(--ff-regular);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.section.aif-about-accordion.real-accordion-two
+    .default-content-wrapper
+    h2:nth-child(2) {
+    display: none;
+}
+
+.section.aif-about-accordion.real-accordion-two
+    .default-content-wrapper
+    h2
+    .icon {
+    display: flex;
+    align-items: center;
+}
+
+.section.aif-about-accordion.real-accordion-two .accordion-wrapper .accordion {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #e7e5e4;
+}
+
+.section.aif-about-accordion.real-accordion-two
+    .default-content-wrapper
+    .section-h2
+    span.icon
+    img.accordion-img {
+    width: 14px;
+    height: 14px;
+}
+
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion-details {
+    display: flex;
+}
+
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div {
+    max-height: 564px;
+    overflow: hidden;
+}
+
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-details,
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div.accordion-div {
+    min-height: 564px;
+}
+
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-details[open]
+    summary,
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div.accordion-div[open]
+    summary {
+    pointer-events: none;
+}
+
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-details
+    .accordion-summary.accordion-item-label,
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-div
+    .accordion-summary.accordion-item-label {
+    padding: 0;
+    border: 1px solid #e7e5e4;
+}
+
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-details
+    .accordion-summary
+    div,
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-div
+    .accordion-summary
+    div {
+    height: 100%;
+    position: relative;
+}
+
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-details
+    .accordion-summary.accordion-item-label
+    div
+    ul.accordion-ul,
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-div
+    .accordion-summary.accordion-item-label
+    div
+    ul.accordion-ul {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: red;
+    margin: 0;
+    list-style: none;
+    z-index: 1;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background: rgb(34 34 34 / 70%);
+}
+
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-details
+    .accordion-summary.accordion-item-label
+    div
+    p.accordion-p,
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-div
+    .accordion-summary.accordion-item-label
+    div
+    p.accordion-p {
+    height: 100%;
+}
+
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-details
+    .accordion-summary.accordion-item-label
+    div
+    p.accordion-p
+    span
+    img,
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-div
+    .accordion-summary.accordion-item-label
+    div
+    p.accordion-p
+    span
+    img {
+    object-fit: cover;
+}
+
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-details
+    .accordion-summary.accordion-item-label
+    div
+    ul.accordion-ul
+    li.icon0,
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-div
+    .accordion-summary.accordion-item-label
+    div
+    ul.accordion-ul
+    li.icon0 {
+    display: flex;
+    transform: rotate(-90deg) translate(198px);
+    width: 400px;
+    height: 90px;
+    align-items: center;
+    bottom: 194px;
+}
+
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-details
+    .accordion-summary.accordion-item-label
+    div
+    ul.accordion-ul
+    li
+    h2,
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-div
+    .accordion-summary.accordion-item-label
+    div
+    ul.accordion-ul
+    li
+    h2 {
+    text-align: start;
+    font-size: 28px;
+    font-family: var(--ff-regular);
+    line-height: 42px;
+    font-weight: 400;
+    color: rgb(242 242 242);
+}
+
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-details
+    div.accordion-item-body,
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-div
+    div.accordion-item-body {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-details
+    .accordion-summary.accordion-item-label
+    div
+    ul.accordion-ul
+    li.icon1,
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-div
+    .accordion-summary.accordion-item-label
+    div
+    ul.accordion-ul
+    li.icon1 {
+    margin: 28px;
+}
+
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-details
+    .accordion-summary.accordion-item-label
+    div
+    ul.accordion-ul
+    li.icon1
+    h2.accordion-h3,
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-div
+    .accordion-summary.accordion-item-label
+    div
+    ul.accordion-ul
+    li.icon1
+    h2.accordion-h3 {
+    font-size: 80px;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    font-weight: 600;
+    font-family: var(--ff-semibold);
+}
+
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-details
+    div.accordion-item-body
+    h2.accordion-h2:nth-child(1),
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-div
+    div.accordion-item-body
+    h2.accordion-h2:nth-child(1) {
+    font-size: 80px;
+    font-weight: 700;
+    font-family: var(--ff-regular);
+    color: rgb(0 0 0 / 12%);
+    line-height: 120px;
+}
+
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-details
+    div.accordion-item-body
+    h2.accordion-h2:nth-child(2),
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-div
+    div.accordion-item-body
+    h2.accordion-h2:nth-child(2) {
+    font-size: 32px;
+    font-weight: 400;
+    font-family: var(--ff-regular);
+    color: rgb(0 0 0);
+    line-height: 48px;
+}
+
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-details
+    div.accordion-item-body
+    ul
+    li.accordion-li,
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-div
+    div.accordion-item-body
+    ul
+    li.accordion-li {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: rgb(61 61 61);
+    font-family: var(--ff-regular);
+}
+
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-details
+    div.accordion-item-body
+    ul
+    li
+    span
+    img.accordion-img,
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-div
+    div.accordion-item-body
+    ul
+    li
+    span
+    img.accordion-img {
+    width: 14px;
+    height: 14px;
+    min-width: unset;
+    min-height: unset;
+    object-fit: contain;
+    max-width: unset;
+}
+
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-details
+    div.accordion-item-body
+    ul
+    li,
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-div
+    div.accordion-item-body
+    ul
+    li {
+    display: flex;
+    gap: 8px;
+}
+
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-details
+    .accordion-summary,
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-div
+    .accordion-summary {
+    max-width: 164px;
+    width: 100%;
+}
+
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-details[open]
+    .accordion-summary {
+    max-width: 483px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.section.aif-about-accordion.real-accordion-two
+    .accordion-wrapper
+    .accordion
+    div
+    .accordion-details[open]
+    .accordion-summary
+    div
+    ul.accordion-ul {
+    display: none;
+}
+
+/* mobile */
+
+@media screen and (width <=1024px) {
+    .section.aif-about-accordion.real-accordion-two .default-content-wrapper {
+        padding: 0 16px;
+    }
+
+    .section.aif-about-accordion.real-accordion-two
+        .default-content-wrapper
+        h2:nth-child(1) {
+        display: none;
+    }
+
+    .section.aif-about-accordion.real-accordion-two
+        .default-content-wrapper
+        h2:nth-child(2) {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+        display: block;
+        color: rgb(224 48 40);
+    }
+
+    .section.aif-about-accordion.real-accordion-two {
+        width: 100%;
+        height: 367px;
+        white-space: nowrap;
+        justify-content: space-between;
+        padding: 20px 0 0;
+    }
+
+    .section.aif-about-accordion.real-accordion-two .accordion-wrapper {
+        overflow: auto hidden;
+        white-space: nowrap;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        padding: 0;
+    }
+
+    .section.aif-about-accordion.real-accordion-two
+        .accordion-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .section.aif-about-accordion.real-accordion-two
+        .accordion-wrapper
+        .accordion {
+        width: 100%;
+        overflow: auto;
+        border: unset;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .section.aif-about-accordion.real-accordion-two
+        .accordion-wrapper
+        .accordion::-webkit-scrollbar {
+        display: none;
+    }
+
+    .section.aif-about-accordion.real-accordion-two
+        .accordion-wrapper
+        .accordion
+        div
+        .accordion-items,
+    .section.aif-about-accordion.real-accordion-two
+        .accordion-wrapper
+        .accordion
+        div.accordion-item {
+        min-height: 272px;
+        width: 525px;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        justify-content: space-between;
+    }
+
+    .section.aif-about-accordion.real-accordion-two
+        .accordion-wrapper
+        .accordion
+        div.accordion-div
+        .accordion-p
+        img {
+        object-fit: cover;
+        width: 262px;
+        height: 272px;
+    }
+
+    .section.aif-about-accordion.real-accordion-two
+        .accordion-wrapper
+        .accordion
+        div
+        .accordion-details,
+    .section.aif-about-accordion.real-accordion-two
+        .accordion-wrapper
+        .accordion
+        div.accordion-div
+        ul {
+        display: none;
+    }
+
+    .section.aif-about-accordion.real-accordion-two
+        .accordion-wrapper
+        .accordion
+        div
+        .accordion-details
+        div.accordion-item-body
+        h2.accordion-h2:nth-child(1),
+    .section.aif-about-accordion.real-accordion-two
+        .accordion-wrapper
+        .accordion
+        div
+        .accordion-div
+        div.accordion-item-body
+        h2.accordion-h2:nth-child(1) {
+        font-size: 34px;
+        font-weight: 700;
+        font-family: var(--ff-regular);
+        color: rgb(0 0 0 / 12%);
+        line-height: 54px;
+    }
+
+    .section.aif-about-accordion.real-accordion-two
+        .accordion-wrapper
+        .accordion
+        div
+        .accordion-details
+        div.accordion-item-body
+        h2.accordion-h2:nth-child(2),
+    .section.aif-about-accordion.real-accordion-two
+        .accordion-wrapper
+        .accordion
+        div
+        .accordion-div
+        div.accordion-item-body
+        h2.accordion-h2:nth-child(2) {
+        font-size: 14px;
+        font-weight: 400;
+        font-family: var(--ff-regular);
+        color: rgb(0 0 0);
+        line-height: 21px;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .section.aif-about-accordion.real-accordion-two
+        .accordion-wrapper
+        .accordion
+        div
+        .accordion-details
+        div.accordion-item-body
+        .accordion-ul,
+    .section.aif-about-accordion.real-accordion-two
+        .accordion-wrapper
+        .accordion
+        div
+        .accordion-div
+        div.accordion-item-body
+        .accordion-ul {
+        gap: 0;
+    }
+
+    .section.aif-about-accordion.real-accordion-two
+        .accordion-wrapper
+        .accordion
+        div
+        .accordion-details
+        div.accordion-item-body
+        ul
+        li
+        span
+        img,
+    .section.aif-about-accordion.real-accordion-two
+        .accordion-wrapper
+        .accordion
+        div
+        .accordion-div
+        div.accordion-item-body
+        ul
+        li
+        span
+        img {
+        width: 6px;
+        height: 6px;
+        min-width: unset;
+        min-height: unset;
+    }
+
+    .section.aif-about-accordion.real-accordion-two
+        .accordion-wrapper
+        .accordion
+        div
+        .accordion-details
+        div.accordion-item-body
+        ul
+        li.accordion-li,
+    .section.aif-about-accordion.real-accordion-two
+        .accordion-wrapper
+        .accordion
+        div
+        .accordion-div
+        div.accordion-item-body
+        ul
+        li.accordion-li {
+        font-size: 8px;
+        line-height: 12px;
+        font-weight: 400;
+        color: rgb(12 10 9);
+        white-space: normal;
+    }
+
+    .section.aif-about-accordion.real-accordion-two
+        .accordion-wrapper
+        .accordion
+        div
+        .accordion-details
+        div.accordion-item-body,
+    .section.aif-about-accordion.real-accordion-two
+        .accordion-wrapper
+        .accordion
+        div
+        .accordion-div
+        div.accordion-item-body {
+        display: flex;
+        flex-direction: column;
+        gap: 8px !important;
+        margin-top: 32px;
+        height: unset;
+        min-height: unset;
+        max-width: 210px;
+        width: 100%;
+        padding: 0;
+        padding-left: 5px;
+    }
+
+    .section.aif-about-accordion.real-accordion-two
+        .accordion-wrapper
+        .accordion
+        div
+        .accordion-details,
+    .section.aif-about-accordion.real-accordion-two
+        .accordion-wrapper
+        .accordion
+        div.accordion-div {
+        min-height: unset;
+        border: unset;
+        background-color: #f5f5f5;
+    }
+
+    .section.aif-about-accordion.real-accordion-two
+        .accordion-wrapper
+        .accordion
+        div.accordion-div.accordion-item-label {
+        padding: 0;
+    }
+
+    .section.aif-about-accordion.real-accordion-two
+        .accordion-wrapper
+        .accordion
+        div {
+        overflow: unset;
+    }
+
+    .section.aif-about-accordion.real-accordion-two
+        .accordion-wrapper
+        .accordion
+        div
+        .accordion-details
+        div.accordion-item-body
+        ul
+        li
+        span
+        img.accordion-img,
+    .section.aif-about-accordion.real-accordion-two
+        .accordion-wrapper
+        .accordion
+        div
+        .accordion-div
+        div.accordion-item-body
+        ul
+        li
+        span
+        img.accordion-img {
+        width: 5px;
+        height: 5px;
+        min-width: unset;
+        min-height: unset;
+    }
+
+    .section.aif-about-accordion.real-estate-accordion
+        .accordion-wrapper
+        .accordion
+        .accordion-item
+        .accordion-item-body
+        > .section-ul {
+        margin-top: 16px;
+    }
+}
+
+/* real-estate accordion framework end */
+@media only screen and (max-width:450px){
+        .section.aif-about-accordion .default-content-wrapper p{
+            font-size: 28px;
+        }
+}
