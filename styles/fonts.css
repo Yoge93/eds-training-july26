@@ -1,11 +1,9 @@
 /* stylelint-disable max-line-length */
 
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap');
-
 body {
   font-family: 'Jost', sans-serif;
-}
-/* @font-face {
+} 
+@font-face {
   font-family: roboto-condensed;
   font-style: normal;
   font-weight: 700;
@@ -43,20 +41,22 @@ body {
 
 @font-face {
   font-family: 'Futura PT';
-  src: url('../fonts/futura-pt-book.woff2') format('woff2');
+  src: url('../fonts/futura-pt-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+/* @font-face {
+  font-family: 'Jost-Italic';
+  src: url('../fonts/Jost-Italic-VariableFont_wght.ttf') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+} */
+@font-face {
+  font-family: 'Jost';
+  src: url('../fonts/Jost-VariableFont_wght.ttf') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
-
-@font-face {
-  font-family: 'Futura PT';
-  src: url('../fonts/futura-pt-bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-body {
-  font-family: 'Futura PT', sans-serif;
-} */

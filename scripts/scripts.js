@@ -197,6 +197,19 @@ function decorateTextSection(){
   });
 }
 
+function addingAnchor(){
+  const paraStyling = document.querySelector('.para-styling');
+  if(paraStyling){
+  const icons= paraStyling.querySelectorAll('.icon');    
+  icons.forEach((icon) => {
+    const anchor = document.createElement('a');
+    anchor.href = '#';
+    anchor.appendChild(icon.cloneNode(true));
+    icon.replaceWith(anchor);
+  });
+  }
+}
+
 loadPage();
 
 
